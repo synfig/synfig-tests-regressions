@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<canvas version="1.0" width="480" height="270" xres="2834.645752" yres="2834.645752" view-box="-4.000000 2.250000 4.000000 -2.250000" antialias="1" fps="24.000" begin-time="0f" end-time="5f" bgcolor="0.500000 0.500000 0.500000 1.000000">
+  <name>Synfig Animation 1</name>
+  <meta name="background_first_color" content="0.880000 0.880000 0.880000"/>
+  <meta name="background_second_color" content="0.650000 0.650000 0.650000"/>
+  <meta name="background_size" content="15.000000 15.000000"/>
+  <meta name="grid_color" content="0.623529 0.623529 0.623529"/>
+  <meta name="grid_show" content="0"/>
+  <meta name="grid_size" content="0.250000 0.250000"/>
+  <meta name="grid_snap" content="0"/>
+  <meta name="guide_color" content="0.435294 0.435294 1.000000"/>
+  <meta name="guide_show" content="1"/>
+  <meta name="guide_snap" content="0"/>
+  <meta name="jack_offset" content="0.000000"/>
+  <meta name="onion_skin" content="0"/>
+  <meta name="onion_skin_future" content="0"/>
+  <meta name="onion_skin_past" content="1"/>
+  <keyframe time="0f" active="true"/>
+  <layer type="circle" active="true" exclude_from_rendering="false" version="0.1" desc="Circle066">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <real guid="37A59D849DCE90E42AA82A1BC76CA56C" value="0.9999999907"/>
+    </param>
+    <param name="blend_method">
+      <integer value="0"/>
+    </param>
+    <param name="color">
+      <color>
+        <r>1.000000</r>
+        <g>1.000000</g>
+        <b>1.000000</b>
+        <a>1.000000</a>
+      </color>
+    </param>
+    <param name="radius">
+      <real guid="6BA6DC2CA62AAD9B1ADBCB3EBF525AC8" value="0.7500000000"/>
+    </param>
+    <param name="feather">
+      <real guid="DB15D366B36E2D47B78C2A63BD83C67E" value="0.0000000000"/>
+    </param>
+    <param name="origin">
+      <vector guid="6AC51C4B1427CBF1209BB9B40C9A169A">
+        <x>0.0497405976</x>
+        <y>-0.0634994507</y>
+      </vector>
+    </param>
+    <param name="invert">
+      <bool value="false"/>
+    </param>
+    <param name="falloff">
+      <integer value="2"/>
+    </param>
+  </layer>
+</canvas>
