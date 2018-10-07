@@ -18,7 +18,7 @@
   <keyframe time="0f" active="true"/>
   <layer type="rectangle" active="true" exclude_from_rendering="false" version="0.2">
     <param name="z_depth">
-      <real value="1.5500000000"/>
+      <real value="0.0000000000"/>
     </param>
     <param name="amount">
       <real value="1.0000000000"/>
@@ -36,14 +36,14 @@
     </param>
     <param name="point1">
       <vector>
-        <x>0.0000000000</x>
+        <x>1.0000000000</x>
         <y>0.0000000000</y>
       </vector>
     </param>
     <param name="point2">
       <vector>
-        <x>0.0000000000</x>
-        <y>0.0000000000</y>
+        <x>1.0000000000</x>
+        <y>1.0000000000</y>
       </vector>
     </param>
     <param name="expand">
