@@ -1,0 +1,20 @@
+language: generic
+os: linux
+script:
+- if [ $TRAVIS_EVENT_TYPE == "push" ] && [[ $TRAVIS_TAG != "current" ]]; then $TRAVIS_BUILD_DIR/generate-reference.sh;
+  fi
+after_success:
+- if [ $TRAVIS_EVENT_TYPE == "push" ] && [[ $TRAVIS_TAG != "current" ]]; then $TRAVIS_BUILD_DIR/deploy-reference.sh;
+  fi
+deploy:
+  provider: releases
+  api_key:
+    secure: e2KcCHvkNxoTxT644BXnNI0lo11wuWLyXne/bYQnVqBw2ZLavMyhH3mrJKQPnVKTaUjbN8ZR6IwNzGrMoGCnp4bCNEO3crc+s82kL6USUWzHV31of2QKVDTFbAZ56AeMY2Il+FtiaBgJyVT/AHd/uWDSxn/7O3QM5SMvQvFpVOYEW/K9Kw46AjAFdkUNk9cLwzrH6hd37Ab6vl8tsBsNvYnzK4Bt/+f7UkODmbb92y4ZeF5IEmiXXZBz5geTNzcVG7n84mUlrvdTFzC7LmzOyniiC37YoZFSOhMvy1bPHOCVYi4Ut8NgWmJQA5AIsLxZ7vvD0uNgmKpUqafSquB8jBY+NYDgbcoLyONNUkoCL6DyieaTEGR1fqRrYTJD3oMMXgPsa1tOGkcupaTky1iKiVEXH4QtosOZIk6Ej4cnzkY5ZeMubGC1RZBSE/hEajYVuNCbCKGn+jhw53kdvcUc1m6XjzG4fV8jgVFRZwnlIfX19+qJ400wXLAu8R5MY2yOwDJt9rMZZQV0Ckf9R/VNDRR6k9f1ZhOjbeGeLcJt5igYtOjz1yGuy5MeOUb+ZfPcIco27UnHDUEKViY05Juy8drrC6xzLNQMgIbvEsmCigKLmK7KazS0fbtBHG8YIkr50WHce8L8xxPgtpNZgdS5yci3b2V/J5AHqbK5rCu81MQ=
+  file_glob: true
+  file:
+  - references/**/**/*png
+  on:
+    repo: reSHARMA/synfig-tests-regressions
+    all_branches: true
+  overwrite: true
+  skip_cleanup: true

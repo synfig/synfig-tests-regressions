@@ -1,0 +1,69 @@
+#!/bin/bash
+
+set -x
+
+# Gets required version of synfig
+
+#TRAVIS_COMMIT_RANGE="88050ae37f95...bd64d25af949"
+#TRAVIS_BUILD_DIR="/home/reshabh/synfig-tests-regressions"
+
+get-synfig () {
+if [ ! -d "/tmp/synfig-$VERSION" ]; then
+	wget "https://sourceforge.net/projects/synfig/files/releases/$VERSION/linux/synfigstudio-$VERSION.x86_64.tar.bz2/download" -O "/tmp/synfig-$VERSION.tar.bz2"
+	#	cp ~/Downloads/synfigstudio-1.0.2.x86_64.tar.bz2 /tmp/synfig-$VERSION.tar.bz2
+	mkdir -p /tmp/synfig-$VERSION
+	tar jxf /tmp/synfig-$VERSION.tar.bz2 -C /tmp/synfig-$VERSION --strip-components=1
+fi
+}
+
+
+# if default version is changed force generate all reference
+# if particular layer reference is changed generate it's reference
+# if some files are added generate references for them
+
+# Get the modified files from the commit 
+
+CHANGED_FILES=`git diff --name-only $TRAVIS_COMMIT_RANGE`
+
+for file in $CHANGED_FILES; do
+
+	EXT=${file##*.}
+	DIR=${file%/*}
+	NAME=${file##*/}
+	NAME=${NAME%.*}
+
+	if [ "$EXT" = "txt" ]; then
+		if [ "$NAME" = "default-version" ]; then
+			# run force generate png
+			bash sources/force-render-png.sh
+		else
+			# just run for one dir
+			pushd $DIR
+			VERSION=`cat $NAME.txt`
+			get-synfig $VERSION
+			for sample in * ; do
+				mkdir -p ${TRAVIS_BUILD_DIR}/$DIR/../../../references/${DIR#*/}
+				if [ "${sample##*.}" = "sif" ]; then
+					if [ -f "${TRAVIS_BUILD_DIR}/$file" ]; then
+						/tmp/synfig-$VERSION/synfig --time 0 -i "${TRAVIS_BUILD_DIR}/$file" -o ${TRAVIS_BUILD_DIR}/$DIR/../../../references/${DIR#*/}/$NAME.png
+					fi
+				fi
+			done
+			popd
+		fi
+	elif [ "$EXT" = "sif" ]; then
+		PARENT_DIR=${DIR##*/}
+		pushd $DIR
+		if [ -f $NAME.txt ]; then
+			VERSION=`cat $NAME.txt`
+		else
+			VERSION=`cat "${TRAVIS_BUILD_DIR}/sources/default-version.txt"`
+		fi
+		get-synfig $VERSION
+		mkdir -p ${TRAVIS_BUILD_DIR}/$DIR/../../../references/${DIR#*/}
+		if [ -f "${TRAVIS_BUILD_DIR}/$file" ]; then
+			/tmp/synfig-$VERSION/synfig --time 0 -i ${TRAVIS_BUILD_DIR}/$file -o ${TRAVIS_BUILD_DIR}/$DIR/../../../references/${DIR#*/}/$NAME.png
+		fi
+		popd
+	fi
+done
