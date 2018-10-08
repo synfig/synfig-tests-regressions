@@ -2,7 +2,9 @@
 
 set -x
 
-DEFAULT_VERSION=`cat default-version.txt`
+rm -rf references/*
+
+DEFAULT_VERSION=`cat $TRAVIS_BUILD_DIR/sources/default-version.txt`
 
 # Get synfig pre-build for default version
 
@@ -11,12 +13,12 @@ wget "https://sourceforge.net/projects/synfig/files/releases/$DEFAULT_VERSION/li
 	-O "/tmp/synfig-$DEFAULT_VERSION.tar.bz2"
 
 mkdir -p /tmp/synfig-$DEFAULT_VERSION
-tar xvfj /tmp/synfig-$DEFAULT_VERSION.tar.bz2 -C /tmp/synfig-$DEFAULT_VERSION --strip-components=1
+tar xfj /tmp/synfig-$DEFAULT_VERSION.tar.bz2 -C /tmp/synfig-$DEFAULT_VERSION --strip-components=1
 
 COMPONENTS="blend-methods converters layers"
 
 for COMPONENT in $COMPONENTS; do
-	pushd $COMPONENT
+	pushd "$TRAVIS_BUILD_DIR/sources/$COMPONENT"
 	for dir in * ; do
 		if [ -d ${dir} ]; then
 			pushd $dir
@@ -34,7 +36,7 @@ for COMPONENT in $COMPONENTS; do
 				-O "/tmp/synfig-$DEFAULT_VERSION.tar.bz2"
 
 				mkdir -p /tmp/synfig-$VERSION
-				tar jxf /tmp/synfig-$VERSION.tar.bz2 -C /tmp
+				tar jxf /tmp/synfig-$VERSION.tar.bz2 -C /tmp/synfig-$VERSION --strip-components=1
 			fi
 			pushd ../../../references
 			mkdir -p ./$COMPONENT/$dir
