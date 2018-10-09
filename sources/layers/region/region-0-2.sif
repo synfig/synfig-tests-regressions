@@ -41,7 +41,7 @@
       </vector>
     </param>
     <param name="invert">
-      <bool value="true"/>
+      <bool value="false"/>
     </param>
     <param name="antialias">
       <bool value="true"/>
@@ -77,20 +77,20 @@
             <t1>
               <radial_composite type="vector">
                 <radius>
-                  <real value="1.1180339887"/>
+                  <real value="0.0000000000"/>
                 </radius>
                 <theta>
-                  <angle value="-116.565048"/>
+                  <angle value="-180.000000"/>
                 </theta>
               </radial_composite>
             </t1>
             <t2>
               <radial_composite type="vector">
                 <radius>
-                  <real value="1.1180340052"/>
+                  <real value="0.0000000000"/>
                 </radius>
                 <theta>
-                  <angle value="-116.565048"/>
+                  <angle value="-180.000000"/>
                 </theta>
               </radial_composite>
             </t2>
@@ -122,20 +122,20 @@
             <t1>
               <radial_composite type="vector">
                 <radius>
-                  <real value="1.1180339887"/>
+                  <real value="0.0000000000"/>
                 </radius>
                 <theta>
-                  <angle value="-26.565050"/>
+                  <angle value="0.000000"/>
                 </theta>
               </radial_composite>
             </t1>
             <t2>
               <radial_composite type="vector">
                 <radius>
-                  <real value="1.1180339754"/>
+                  <real value="0.0000000000"/>
                 </radius>
                 <theta>
-                  <angle value="-26.565050"/>
+                  <angle value="0.000000"/>
                 </theta>
               </radial_composite>
             </t2>
@@ -167,20 +167,20 @@
             <t1>
               <radial_composite type="vector">
                 <radius>
-                  <real value="1.5000000000"/>
+                  <real value="0.0000000000"/>
                 </radius>
                 <theta>
-                  <angle value="90.000000"/>
+                  <angle value="180.000000"/>
                 </theta>
               </radial_composite>
             </t1>
             <t2>
               <radial_composite type="vector">
                 <radius>
-                  <real value="1.5000000000"/>
+                  <real value="0.0000000000"/>
                 </radius>
                 <theta>
-                  <angle value="90.000000"/>
+                  <angle value="180.000000"/>
                 </theta>
               </radial_composite>
             </t2>
