@@ -73,7 +73,7 @@ for file in $CHANGED_FILES; do
 			mkdir -p ${TRAVIS_BUILD_DIR}/$DIR/../../../references/${DIR#*/}
 			for sample in * ; do
 				if [ "${sample##*.}" = "sif" ]; then
-					if [ -f "${TRAVIS_BUILD_DIR}/$sample" ]; then
+					if [ -f "${TRAVIS_BUILD_DIR}/$DIR/$sample" ]; then
 						$SYNFIG --time 0 -i "${TRAVIS_BUILD_DIR}/$DIR/$sample" -o ${TRAVIS_BUILD_DIR}/$DIR/../../../references/${DIR#*/}/${sample%.*}.png
 					fi
 				fi
