@@ -22,7 +22,7 @@ get-synfig-appimage () {
 SYNFIG="/tmp/synfig-$VERSION.appimage --appimage-exec synfig" 
 if [ ! -d "/tmp/synfig-$VERSION.appimage" ]; then
 	if [ "$#" -eq 3 ]; then
-		LINK=$2
+		LINK=$3
 	else
 		LINK="https://sourceforge.net/projects/synfig/files/releases/$VERSION/linux/synfigstudio-$2.appimage/download"
 	fi
