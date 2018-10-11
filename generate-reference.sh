@@ -19,9 +19,14 @@ fi
 }
 
 get-synfig-appimage () {
-SYNFIG="/tmp/synfig-$VERSION.appimage --appimage-exec synfig"
+SYNFIG="/tmp/synfig-$VERSION.appimage --appimage-exec synfig" 
 if [ ! -d "/tmp/synfig-$VERSION.appimage" ]; then
-	wget "https://sourceforge.net/projects/synfig/files/releases/$VERSION/linux/synfigstudio-$2.appimage/download" -O "/tmp/synfig-$VERSION.appimage"
+	if[ "$#" -eq 3 ]; then
+		LINK=$2
+	else
+		LINK="https://sourceforge.net/projects/synfig/files/releases/$VERSION/linux/synfigstudio-$2.appimage/download"
+	fi
+	wget $LINK -O "/tmp/synfig-$VERSION.appimage"
 	chmod +x /tmp/synfig-$VERSION.appimage
 fi
 }
@@ -37,7 +42,7 @@ elif [ $PARSED_VERSION -eq 120 ]; then
 elif [ $PARSED_VERSION -eq 121 ]; then
 	get-synfig-appimage $VERSION "1.2.1-64bit"
 elif [ $PARSED_VERSION -eq 122 ]; then
-	get-synfig-appimage $VERSION "18.09.14-linux64-286f1"
+	get-synfig-appimage $VERSION "18.09.14-linux64-286f1" "https://sourceforge.net/projects/synfig/files/releases/1.2.2/SynfigStudio-1.2.2-18.09.14-linux64-286f1.appimage/download"
 fi
 }
 
