@@ -28,7 +28,6 @@ if [ ! -d "/tmp/synfig-$VERSION.appimage" ]; then
 	fi
 	wget --quiet $LINK -O "/tmp/synfig-$VERSION.appimage"
 	chmod +x /tmp/synfig-$VERSION.appimage
-	ls -la /tmp
 fi
 }
 
@@ -75,7 +74,7 @@ for file in $CHANGED_FILES; do
 			for sample in * ; do
 				if [ "${sample##*.}" = "sif" ]; then
 					if [ -f "${TRAVIS_BUILD_DIR}/$DIR/$sample" ]; then
-						$SYNFIG --time 0 -i "${TRAVIS_BUILD_DIR}/$DIR/$sample" -o ${TRAVIS_BUILD_DIR}/$DIR/../../../references/${DIR#*/}/${sample%.*}.png
+						$SYNFIG -v 10 --time 0 -i "${TRAVIS_BUILD_DIR}/$DIR/$sample" -o ${TRAVIS_BUILD_DIR}/$DIR/../../../references/${DIR#*/}/${sample%.*}.png
 					fi
 				fi
 			done
@@ -92,7 +91,7 @@ for file in $CHANGED_FILES; do
 		get-synfig $VERSION
 		mkdir -p ${TRAVIS_BUILD_DIR}/$DIR/../../../references/${DIR#*/}
 		if [ -f "${TRAVIS_BUILD_DIR}/$file" ]; then
-			$SYNFIG --time 0 -i ${TRAVIS_BUILD_DIR}/$file -o ${TRAVIS_BUILD_DIR}/$DIR/../../../references/${DIR#*/}/$NAME.png
+			$SYNFIG -v 10 --time 0 -i ${TRAVIS_BUILD_DIR}/$file -o ${TRAVIS_BUILD_DIR}/$DIR/../../../references/${DIR#*/}/$NAME.png
 		fi
 		popd
 	fi
