@@ -21,7 +21,7 @@ fi
 get-synfig-appimage () {
 SYNFIG="/tmp/synfig-$VERSION.appimage --appimage-exec synfig"
 if [ ! -d "/tmp/synfig-$VERSION.appimage" ]; then
-	wget "https://sourceforge.net/projects/synfig/files/releases/$VERSION/linux/synfigstudio-$2/download" -O "/tmp/synfig-$VERSION.appimage"
+	wget "https://sourceforge.net/projects/synfig/files/releases/$VERSION/linux/synfigstudio-$2.appimage/download" -O "/tmp/synfig-$VERSION.appimage"
 	chmod +x /tmp/synfig-$VERSION.appimage
 fi
 }
