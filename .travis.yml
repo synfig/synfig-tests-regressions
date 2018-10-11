@@ -6,15 +6,6 @@ script:
 after_success:
 - if [ $TRAVIS_EVENT_TYPE == "push" ] && [[ $TRAVIS_TAG != "current" ]]; then $TRAVIS_BUILD_DIR/deploy-reference.sh;
   fi
-deploy:
-  provider: releases
-  api_key:
-    secure: e2KcCHvkNxoTxT644BXnNI0lo11wuWLyXne/bYQnVqBw2ZLavMyhH3mrJKQPnVKTaUjbN8ZR6IwNzGrMoGCnp4bCNEO3crc+s82kL6USUWzHV31of2QKVDTFbAZ56AeMY2Il+FtiaBgJyVT/AHd/uWDSxn/7O3QM5SMvQvFpVOYEW/K9Kw46AjAFdkUNk9cLwzrH6hd37Ab6vl8tsBsNvYnzK4Bt/+f7UkODmbb92y4ZeF5IEmiXXZBz5geTNzcVG7n84mUlrvdTFzC7LmzOyniiC37YoZFSOhMvy1bPHOCVYi4Ut8NgWmJQA5AIsLxZ7vvD0uNgmKpUqafSquB8jBY+NYDgbcoLyONNUkoCL6DyieaTEGR1fqRrYTJD3oMMXgPsa1tOGkcupaTky1iKiVEXH4QtosOZIk6Ej4cnzkY5ZeMubGC1RZBSE/hEajYVuNCbCKGn+jhw53kdvcUc1m6XjzG4fV8jgVFRZwnlIfX19+qJ400wXLAu8R5MY2yOwDJt9rMZZQV0Ckf9R/VNDRR6k9f1ZhOjbeGeLcJt5igYtOjz1yGuy5MeOUb+ZfPcIco27UnHDUEKViY05Juy8drrC6xzLNQMgIbvEsmCigKLmK7KazS0fbtBHG8YIkr50WHce8L8xxPgtpNZgdS5yci3b2V/J5AHqbK5rCu81MQ=
-  file_glob: true
-  file:
-  - references/**/**/*png
-  on:
-    repo: reSHARMA/synfig-tests-regressions
-    all_branches: true
-  overwrite: true
-  skip_cleanup: true
+env:
+  matrix:
+    secure: ZC4ZemYyOhzuOKNCBYeVM9vKHXKtRDmr8plooUpkGpxYzsGxJrBUp79o8mQPfkIAdQXuPg1eqrd/teFwB7FIw/yvlWqEGByYYFbEiu/3CpmP9Jfhj72JpNQJiqH4cWo/bAg60FNM1YcDgJP2R6VGvmTIJOoTRdiMNJyBmGx+cI+znx4a1tAwKBb65bh26zDDhY2Feb+vsGRYQgPWelAN5LhUcWt4VRq9pBxIplkKObFUSLhWGkmZt/JMU2c4FVuGdjxqXqea1N/fB8fR8jG0CW+C1Bv/bT4YTkkaRgz3M0l+zNP1MccFJNIxJjmaRokZ8B9mFEj1kwFFm9vVwSptv0/1pKVummAD7ruXzqH9HF1UJo0BoKYzJt07zvQnYYWBlAQAR2JmIMwSJRVJpppnFfrW9itwtC201l8vTM9SpZZ+MKfZJc4GbLIHro6wDSmSH/CjMyBxHyU1nBXl7GF4Dynr8LYLZTEMom19E9m2npOcanzfVWjwec2kv/BdZW592XZzyUXsZ9DmeYupn1zvoQOuottuREqQ8CVr2P/UqafpcmeBiXN9INRSXKj2T3cGly9z7AGPjLCdQ5w7mGsGZKN9jglYEGA9wJAa6iP+swSWkDghs7CRj3xUMG2fhLrWbaDsn++g4sP7b7GrQHM7fL2taGr8SBfR3+XyZvPMbcQ=
