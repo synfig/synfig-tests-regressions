@@ -28,6 +28,7 @@ if [ ! -d "/tmp/synfig-$VERSION.appimage" ]; then
 	fi
 	wget --quiet $LINK -O "/tmp/synfig-$VERSION.appimage"
 	chmod +x /tmp/synfig-$VERSION.appimage
+	ls -la /tmp
 fi
 }
 
@@ -38,7 +39,7 @@ PARSED_VERSION=${VERSION//./}
 if [ $PARSED_VERSION -lt 120 ]; then
 	get-synfig-tar $VERSION
 elif [ $PARSED_VERSION -eq 120 ]; then
-	get-synfig-appimage $VERSION "1.2.0-32bit-r2"
+	get-synfig-appimage $VERSION "1.2.0-64bit-r2"
 elif [ $PARSED_VERSION -eq 121 ]; then
 	get-synfig-appimage $VERSION "1.2.1-64bit"
 elif [ $PARSED_VERSION -eq 122 ]; then
