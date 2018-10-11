@@ -7,15 +7,39 @@ set -x
 #TRAVIS_COMMIT_RANGE="88050ae37f95...bd64d25af949"
 #TRAVIS_BUILD_DIR="/home/reshabh/synfig-tests-regressions"
 
-get-synfig () {
+$SYNFIG=""
+
+get-synfig-tar () {
+SYNFIG="/tmp/synfig-$VERSION/synfig"
 if [ ! -d "/tmp/synfig-$VERSION" ]; then
 	wget "https://sourceforge.net/projects/synfig/files/releases/$VERSION/linux/synfigstudio-$VERSION.x86_64.tar.bz2/download" -O "/tmp/synfig-$VERSION.tar.bz2"
-	#	cp ~/Downloads/synfigstudio-1.0.2.x86_64.tar.bz2 /tmp/synfig-$VERSION.tar.bz2
 	mkdir -p /tmp/synfig-$VERSION
 	tar jxf /tmp/synfig-$VERSION.tar.bz2 -C /tmp/synfig-$VERSION --strip-components=1
 fi
 }
 
+get-synfig-appimage () {
+SYNFIG="/tmp/synfig-$VERSION.appimage --appimage-exec synfig"
+if [ ! -d "/tmp/synfig-$VERSION.appimage" ]; then
+	wget "https://sourceforge.net/projects/synfig/files/releases/$VERSION/linux/synfigstudio-$2/download" -O "/tmp/synfig-$VERSION.appimage"
+	chmod +x /tmp/synfig-$VERSION.appimage
+fi
+}
+
+get-synfig () {
+VERSION=$1
+PARSED_VERSION=${VERSION//./}
+
+if [ $PARSED_VERSION -lt 120 ]; then
+	get-synfig-tar $VERSION
+elif [ $PARSED_VERSION -eq 120 ]; then
+	get-synfig-appimage $VERSION "1.2.0-32bit-r2"
+elif [ $PARSED_VERSION -eq 121 ]; then
+	get-synfig-appimage $VERSION "1.2.1-64bit"
+elif [ $PARSED_VERSION -eq 122 ]; then
+	get-synfig-appimage $VERSION "18.09.14-linux64-286f1"
+fi
+}
 
 # if default version is changed force generate all reference
 # if particular layer reference is changed generate it's reference
@@ -45,7 +69,7 @@ for file in $CHANGED_FILES; do
 				mkdir -p ${TRAVIS_BUILD_DIR}/$DIR/../../../references/${DIR#*/}
 				if [ "${sample##*.}" = "sif" ]; then
 					if [ -f "${TRAVIS_BUILD_DIR}/$file" ]; then
-						/tmp/synfig-$VERSION/synfig --time 0 -i "${TRAVIS_BUILD_DIR}/$file" -o ${TRAVIS_BUILD_DIR}/$DIR/../../../references/${DIR#*/}/$NAME.png
+						$SYNFIG --time 0 -i "${TRAVIS_BUILD_DIR}/$file" -o ${TRAVIS_BUILD_DIR}/$DIR/../../../references/${DIR#*/}/$NAME.png
 					fi
 				fi
 			done
@@ -62,7 +86,7 @@ for file in $CHANGED_FILES; do
 		get-synfig $VERSION
 		mkdir -p ${TRAVIS_BUILD_DIR}/$DIR/../../../references/${DIR#*/}
 		if [ -f "${TRAVIS_BUILD_DIR}/$file" ]; then
-			/tmp/synfig-$VERSION/synfig --time 0 -i ${TRAVIS_BUILD_DIR}/$file -o ${TRAVIS_BUILD_DIR}/$DIR/../../../references/${DIR#*/}/$NAME.png
+			$SYNFIG --time 0 -i ${TRAVIS_BUILD_DIR}/$file -o ${TRAVIS_BUILD_DIR}/$DIR/../../../references/${DIR#*/}/$NAME.png
 		fi
 		popd
 	fi
