@@ -12,7 +12,7 @@ $SYNFIG=""
 get-synfig-tar () {
 SYNFIG="/tmp/synfig-$VERSION/synfig"
 if [ ! -d "/tmp/synfig-$VERSION" ]; then
-	wget --quite "https://sourceforge.net/projects/synfig/files/releases/$VERSION/linux/synfigstudio-$VERSION.x86_64.tar.bz2/download" -O "/tmp/synfig-$VERSION.tar.bz2"
+	wget --quiet "https://sourceforge.net/projects/synfig/files/releases/$VERSION/linux/synfigstudio-$VERSION.x86_64.tar.bz2/download" -O "/tmp/synfig-$VERSION.tar.bz2"
 	mkdir -p /tmp/synfig-$VERSION
 	tar jxf /tmp/synfig-$VERSION.tar.bz2 -C /tmp/synfig-$VERSION --strip-components=1
 fi
@@ -26,7 +26,7 @@ if [ ! -d "/tmp/synfig-$VERSION.appimage" ]; then
 	else
 		LINK="https://sourceforge.net/projects/synfig/files/releases/$VERSION/linux/synfigstudio-$2.appimage/download"
 	fi
-	wget --quite $LINK -O "/tmp/synfig-$VERSION.appimage"
+	wget --quiet $LINK -O "/tmp/synfig-$VERSION.appimage"
 	chmod +x /tmp/synfig-$VERSION.appimage
 fi
 }
