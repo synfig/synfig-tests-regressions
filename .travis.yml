@@ -1,5 +1,6 @@
 language: generic
 os: linux
+dist: xenial
 script:
 - if [ $TRAVIS_EVENT_TYPE == "push" ] && [[ $TRAVIS_TAG != "current" ]]; then $TRAVIS_BUILD_DIR/generate-reference.sh;
   fi
