@@ -7,7 +7,7 @@ set -x
 #TRAVIS_COMMIT_RANGE="88050ae37f95...bd64d25af949"
 #TRAVIS_BUILD_DIR="/home/reshabh/synfig-tests-regressions"
 
-$SYNFIG=""
+SYNFIG=""
 
 get-synfig-tar () {
 SYNFIG="/tmp/synfig-$VERSION/synfig"
