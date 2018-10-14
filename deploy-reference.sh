@@ -10,6 +10,7 @@ openssl aes-256-cbc -K $encrypted_8843021b8580_key -iv $encrypted_8843021b8580_i
 chmod 600 ./deploy_key
 eval `ssh-agent -s`
 cp ./deploy_key ~/.ssh/id_rsa
+ls ~/.ssh/
 
 git config --global push.default simple
 git config user.name "Travis CI"
