@@ -61,7 +61,7 @@ for file in $CHANGED_FILES; do
 	NAME=${file##*/}
 	NAME=${NAME%.*}
 
-	if [ "$EXT" = "txt" ]; then
+	if [ "$EXT" = "txt" ] || true; then
 		if [ "$NAME" = "default-version" ]; then
 			# run force generate png
 			bash sources/force-render-png.sh
