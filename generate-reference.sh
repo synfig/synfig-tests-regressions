@@ -52,6 +52,9 @@ fi
 
 # Get the modified files from the commit 
 
+echo 1 > file.txt
+exit 0
+
 CHANGED_FILES=`git diff --name-only $TRAVIS_COMMIT_RANGE`
 
 for file in $CHANGED_FILES; do
