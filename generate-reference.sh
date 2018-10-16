@@ -52,9 +52,6 @@ fi
 
 # Get the modified files from the commit 
 
-echo 1 > file.txt
-exit 0
-
 CHANGED_FILES=`git diff --name-only $TRAVIS_COMMIT_RANGE`
 
 for file in $CHANGED_FILES; do
@@ -64,8 +61,8 @@ for file in $CHANGED_FILES; do
 	NAME=${file##*/}
 	NAME=${NAME%.*}
 
-	if [ "$EXT" = "txt" ] || true; then
-		if [ "$NAME" = "default-version" ] || true; then
+	if [ "$EXT" = "txt" ]; then
+		if [ "$NAME" = "default-version" ]; then
 			# run force generate png
 			bash sources/force-render-png.sh
 		else
