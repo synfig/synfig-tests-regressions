@@ -20,5 +20,4 @@ git checkout "${TRAVIS_BRANCH}"
 git add --all
 git commit -m "Update reference png for commits: ${TRAVIS_COMMIT_RANGE}" -m "Travis build: ${TRAVIS_BUILD_NUMBER} [ci skip]"
 rm .git/hooks/pre-push # from https://github.com/git-lfs/git-lfs/issues/2291#issuecomment-305887405
-GIT_SSH_COMMAND="ssh -i $HOME/.ssh/id_rsa" git lfs push --all "git@github.com:${TRAVIS_REPO_SLUG}.git" "${TRAVIS_BRANCH}"
 GIT_SSH_COMMAND="ssh -i $HOME/.ssh/id_rsa" git push "git@github.com:${TRAVIS_REPO_SLUG}.git" "${TRAVIS_BRANCH}"
