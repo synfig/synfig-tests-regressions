@@ -2,9 +2,13 @@
 
 set -x
 
-rm -rf references/*
+SCRIPT_DIR=$(cd `dirname "$0"`; pwd)
 
-DEFAULT_VERSION=`cat $TRAVIS_BUILD_DIR/sources/default-version.txt`
+rm -rf ${SCRIPT_DIR}/../references/*
+
+
+
+DEFAULT_VERSION=`cat ${SCRIPT_DIR}/default-version.txt`
 
 # Get synfig pre-build for default version
 
@@ -50,7 +54,7 @@ fi
 COMPONENTS="blend-methods converters layers"
 
 for COMPONENT in $COMPONENTS; do
-	pushd "$TRAVIS_BUILD_DIR/sources/$COMPONENT"
+	pushd "${SCRIPT_DIR}/$COMPONENT"
 	for dir in * ; do
 		if [ -d ${dir} ]; then
 			pushd $dir
