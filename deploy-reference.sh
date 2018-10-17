@@ -3,6 +3,7 @@
 # Push all png 
 
 set -e
+set -x
 
 cd "${TRAVIS_BUILD_DIR}"
 
