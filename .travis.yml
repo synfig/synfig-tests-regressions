@@ -7,3 +7,6 @@ script:
 after_success:
 - if [ $TRAVIS_EVENT_TYPE == "push" ] && [[ $TRAVIS_TAG != "current" ]]; then $TRAVIS_BUILD_DIR/deploy-reference.sh;
   fi
+env:
+  matrix:
+    secure: ZC4ZemYyOhzuOKNCBYeVM9vKHXKtRDmr8plooUpkGpxYzsGxJrBUp79o8mQPfkIAdQXuPg1eqrd/teFwB7FIw/yvlWqEGByYYFbEiu/3CpmP9Jfhj72JpNQJiqH4cWo/bAg60FNM1YcDgJP2R6VGvmTIJOoTRdiMNJyBmGx+cI+znx4a1tAwKBb65bh26zDDhY2Feb+vsGRYQgPWelAN5LhUcWt4VRq9pBxIplkKObFUSLhWGkmZt/JMU2c4FVuGdjxqXqea1N/fB8fR8jG0CW+C1Bv/bT4YTkkaRgz3M0l+zNP1MccFJNIxJjmaRokZ8B9mFEj1kwFFm9vVwSptv0/1pKVummAD7ruXzqH9HF1UJo0BoKYzJt07zvQnYYWBlAQAR2JmIMwSJRVJpppnFfrW9itwtC201l8vTM9SpZZ+MKfZJc4GbLIHro6wDSmSH/CjMyBxHyU1nBXl7GF4Dynr8LYLZTEMom19E9m2npOcanzfVWjwec2kv/BdZW592XZzyUXsZ9DmeYupn1zvoQOuottuREqQ8CVr2P/UqafpcmeBiXN9INRSXKj2T3cGly9z7AGPjLCdQ5w7mGsGZKN9jglYEGA9wJAa6iP+swSWkDghs7CRj3xUMG2fhLrWbaDsn++g4sP7b7GrQHM7fL2taGr8SBfR3+XyZvPMbcQ=
