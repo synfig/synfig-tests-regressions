@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -x
+set -e
 
 SCRIPT_DIR=$(cd `dirname "$0"`; pwd)
 
@@ -89,8 +89,8 @@ for COMPONENT in $COMPONENTS; do
 					$SYNFIG --time 0 -i $CURRENT_DIR/$sample -o $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"${sample%.*}".png
 				fi
 				if [ "$MODE" = "results" ]; then
-					DIFF=$(`idiff $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"${sample%.*}".png  $CURRENT_DIR/../../../results/$COMPONENT/$dir/"${sample%.*}".png` )
-					echo "$sample $DIFF"
+					echo $sample
+					idiff $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"${sample%.*}".png  $CURRENT_DIR/../../../results/$COMPONENT/$dir/"${sample%.*}".png
 				fi
 			done
 			popd
