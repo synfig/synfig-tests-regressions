@@ -94,7 +94,7 @@ for COMPONENT in $COMPONENTS; do
 				fi
 				if [ "$MODE" = "results" ]; then
 					echo -ne "$NAME "
-					idiff $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"$NAME".png  $CURRENT_DIR/../../../results/$COMPONENT/$dir/"$NAME".png
+					idiff -q $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"$NAME".png  $CURRENT_DIR/../../../results/$COMPONENT/$dir/"$NAME".png
 				fi
 			done
 			popd
