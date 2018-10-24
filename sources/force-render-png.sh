@@ -93,8 +93,12 @@ for COMPONENT in $COMPONENTS; do
 					$SYNFIG --time 0 -i $CURRENT_DIR/$sample -o $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"$NAME".png &> /dev/null
 				fi
 				if [ "$MODE" = "results" ]; then
-					echo -ne "$NAME "
-					idiff -q $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"$NAME".png  $CURRENT_DIR/../../../results/$COMPONENT/$dir/"$NAME".png
+					TEST=$(idiff $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"$NAME".png  $CURRENT_DIR/../../../results/$COMPONENT/$dir/"$NAME".png)
+					if echo "$TEST" | grep -q "PASS"; then
+						echo "$NAME passed"
+					else
+						echo "SNAME failed"
+					fi
 				fi
 			done
 			popd
