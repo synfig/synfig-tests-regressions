@@ -89,7 +89,7 @@ for COMPONENT in $COMPONENTS; do
 					$SYNFIG --time 0 -i $CURRENT_DIR/$sample -o $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"${sample%.*}".png
 				fi
 				if [ "$MODE" = "results" ]; then
-					DIFF=$(`compare -metric RMSE $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"${sample%.*}".png  $CURRENT_DIR/../../../references/$COMPONENT/$dir/"${sample%.*}".png` NULL)
+					DIFF=$(`compare -metric RMSE $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"${sample%.*}".png  $CURRENT_DIR/../../../references/$COMPONENT/$dir/"${sample%.*}".png NULL`)
 					echo "$sample differ by $DIFF"
 				fi
 			done
