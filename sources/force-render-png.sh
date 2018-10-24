@@ -59,7 +59,7 @@ fi
 COMPONENTS="blend-methods converters layers"
 
 if [ $MODE = "results" ]; then
-	mkdir $MODE
+	mkdir -p ../$MODE
 fi
 
 for COMPONENT in $COMPONENTS; do
