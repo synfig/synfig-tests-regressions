@@ -6,6 +6,8 @@ SCRIPT_DIR=$(cd `dirname "$0"`; pwd)
 
 
 MODE=$1
+PASS=0
+FAIL=0
 
 SYNFIG_OPTION=""
 
@@ -96,8 +98,10 @@ for COMPONENT in $COMPONENTS; do
 					TEST=$(idiff $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"$NAME".png  $CURRENT_DIR/../../../results/$COMPONENT/$dir/"$NAME".png)
 					if echo "$TEST" | grep -q "PASS"; then
 						echo "$NAME passed"
+						PASS=$((PASS+1))
 					else
 						echo "SNAME failed"
+						FAIL=$((FAIL+1))
 					fi
 				fi
 			done
@@ -106,3 +110,7 @@ for COMPONENT in $COMPONENTS; do
 	done
 	popd 
 done
+
+echo "TOTAL $((PASS+FAIL))"
+echo "PASSED $PASS"
+echo "FAILED $FAIL"
