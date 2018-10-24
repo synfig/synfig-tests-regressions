@@ -7,7 +7,7 @@ SCRIPT_DIR=$(cd `dirname "$0"`; pwd)
 
 MODE=$1
 
-SYNFIG_OPTION="-q"
+SYNFIG_OPTION=""
 
 if [ "$MODE" = "references" ]; then
 	rm -rf ${SCRIPT_DIR}/../references/*
@@ -88,10 +88,10 @@ for COMPONENT in $COMPONENTS; do
 			for sample in * ; do
 				# Renders every sif file present 
 				if [ "${sample##*.}" = "sif" ]; then
-					$SYNFIG --time 0 -i $CURRENT_DIR/$sample -o $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"${sample%.*}".png
+					$SYNFIG --time 0 -i $CURRENT_DIR/$sample -o $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"${sample%.*}".png &> /dev/null
 				fi
 				if [ "$MODE" = "results" ]; then
-					echo $sample
+					echo -ne "$sample "
 					idiff $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"${sample%.*}".png  $CURRENT_DIR/../../../results/$COMPONENT/$dir/"${sample%.*}".png
 				fi
 			done
