@@ -4,9 +4,12 @@ set -x
 
 SCRIPT_DIR=$(cd `dirname "$0"`; pwd)
 
-rm -rf ${SCRIPT_DIR}/../references/*
 
+MODE=$1
 
+if [ "$MODE" = "references" ]; then
+	rm -rf ${SCRIPT_DIR}/../references/*
+fi
 
 DEFAULT_VERSION=`cat ${SCRIPT_DIR}/default-version.txt`
 
@@ -40,7 +43,9 @@ get-synfig () {
 VERSION=$1
 PARSED_VERSION=${VERSION//./}
 
-if [ $PARSED_VERSION -lt 120 ]; then
+if [ "$MODE" = "results" ]; then 
+	SYNFIG="/bin/synfig"
+elif [ $PARSED_VERSION -lt 120 ]; then
 	get-synfig-tar $VERSION
 elif [ $PARSED_VERSION -eq 120 ]; then
 	get-synfig-appimage $VERSION "1.2.0-64bit-r2"
@@ -52,6 +57,10 @@ fi
 }
 
 COMPONENTS="blend-methods converters layers"
+
+if [ $MODE = "results" ]; then
+	mkdir $MODE
+fi
 
 for COMPONENT in $COMPONENTS; do
 	pushd "${SCRIPT_DIR}/$COMPONENT"
@@ -70,14 +79,18 @@ for COMPONENT in $COMPONENTS; do
 			if [ ! -d "/tmp/synfig-$VERSION" ]; then
 				get-synfig $VERSION
 			fi
-			pushd ../../../references
+			pushd ../../../$MODE
 			mkdir -p ./$COMPONENT/$dir
 			popd
 			CURRENT_DIR=`pwd`
 			for sample in * ; do
 				# Renders every sif file present 
 				if [ "${sample##*.}" = "sif" ]; then
-					$SYNFIG --time 0 -i $CURRENT_DIR/$sample -o $CURRENT_DIR/../../../references/$COMPONENT/$dir/"${sample%.*}".png
+					$SYNFIG --time 0 -i $CURRENT_DIR/$sample -o $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"${sample%.*}".png
+				fi
+				if [ "$MODE" = "results" ]; then
+					DIFF=$(`compare -metric RMSE $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"${sample%.*}".png  $CURRENT_DIR/../../../references/$COMPONENT/$dir/"${sample%.*}".png` NULL)
+					echo "$sample differ by $DIFF"
 				fi
 			done
 			popd
