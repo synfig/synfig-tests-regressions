@@ -95,8 +95,8 @@ for COMPONENT in $COMPONENTS; do
 					$SYNFIG --time 0 -i $CURRENT_DIR/$sample -o $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"$NAME".png &> /dev/null
 				fi
 				if [ "$MODE" = "results" ]; then
-					TEST=$(idiff $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"$NAME".png  $CURRENT_DIR/../../../results/$COMPONENT/$dir/"$NAME".png)
-					if echo "$TEST" | grep -q "PASS"; then
+					TEST=$(compare -metric RMSE $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"$NAME".png  $CURRENT_DIR/../../../results/$COMPONENT/$dir/"$NAME".png NULL)
+					if echo "$TEST" | grep -q "0 (0)"; then
 						echo "$NAME passed"
 						PASS=$((PASS+1))
 					else
