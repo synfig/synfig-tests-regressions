@@ -87,12 +87,14 @@ for COMPONENT in $COMPONENTS; do
 			CURRENT_DIR=`pwd`
 			for sample in * ; do
 				# Renders every sif file present 
-				if [ "${sample##*.}" = "sif" ]; then
-					$SYNFIG --time 0 -i $CURRENT_DIR/$sample -o $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"${sample%.*}".png &> /dev/null
+				NAME=${sample%.*}
+				EXT=${sample##*.}
+				if [ "$EXT" = "sif" ]; then
+					$SYNFIG --time 0 -i $CURRENT_DIR/$sample -o $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"$NAME".png &> /dev/null
 				fi
 				if [ "$MODE" = "results" ]; then
-					echo -ne "$sample "
-					idiff $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"${sample%.*}".png  $CURRENT_DIR/../../../results/$COMPONENT/$dir/"${sample%.*}".png
+					echo -ne "$NAME "
+					idiff $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"$NAME".png  $CURRENT_DIR/../../../results/$COMPONENT/$dir/"$NAME".png
 				fi
 			done
 			popd
