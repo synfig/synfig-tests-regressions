@@ -7,6 +7,8 @@ SCRIPT_DIR=$(cd `dirname "$0"`; pwd)
 
 MODE=$1
 
+SYNFIG_OPTION="-q"
+
 if [ "$MODE" = "references" ]; then
 	rm -rf ${SCRIPT_DIR}/../references/*
 fi
@@ -18,7 +20,7 @@ DEFAULT_VERSION=`cat ${SCRIPT_DIR}/default-version.txt`
 SYNFIG=""
 
 get-synfig-tar () {
-SYNFIG="/tmp/synfig-$VERSION/synfig"
+SYNFIG="/tmp/synfig-$VERSION/synfig $SYNFIG_OPTION"
 if [ ! -d "/tmp/synfig-$VERSION" ]; then
 	wget --quiet "https://sourceforge.net/projects/synfig/files/releases/$VERSION/linux/synfigstudio-$VERSION.x86_64.tar.bz2/download" -O "/tmp/synfig-$VERSION.tar.bz2"
 	mkdir -p /tmp/synfig-$VERSION
@@ -27,7 +29,7 @@ fi
 }
 
 get-synfig-appimage () {
-SYNFIG="/tmp/synfig-$VERSION.appimage --appimage-exec synfig" 
+SYNFIG="/tmp/synfig-$VERSION.appimage --appimage-exec synfig $SYNFIG_OPTION" 
 if [ ! -d "/tmp/synfig-$VERSION.appimage" ]; then
 	if [ "$#" -eq 3 ]; then
 		LINK=$3
