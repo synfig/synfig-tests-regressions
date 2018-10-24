@@ -89,7 +89,7 @@ for COMPONENT in $COMPONENTS; do
 					$SYNFIG --time 0 -i $CURRENT_DIR/$sample -o $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"${sample%.*}".png
 				fi
 				if [ "$MODE" = "results" ]; then
-					DIFF=$(`idiff $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"${sample%.*}".png  $CURRENT_DIR/../../../references/$COMPONENT/$dir/"${sample%.*}".png` )
+					DIFF=$(`idiff $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"${sample%.*}".png  $CURRENT_DIR/../../../results/$COMPONENT/$dir/"${sample%.*}".png` )
 					echo "$sample $DIFF"
 				fi
 			done
