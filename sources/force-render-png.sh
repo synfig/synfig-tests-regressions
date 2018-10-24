@@ -15,7 +15,7 @@ DEFAULT_VERSION=`cat ${SCRIPT_DIR}/default-version.txt`
 
 # Get synfig pre-build for default version
 
-$SYNFIG=""
+SYNFIG=""
 
 get-synfig-tar () {
 SYNFIG="/tmp/synfig-$VERSION/synfig"
