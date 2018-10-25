@@ -1,6 +1,6 @@
 #!/bin/bash
 
-set -x
+set -e
 
 SCRIPT_DIR=$(cd `dirname "$0"`; pwd)
 
@@ -113,6 +113,9 @@ for COMPONENT in $COMPONENTS; do
 	popd 
 done
 
-echo "TOTAL $((PASS+FAIL))"
-echo "PASSED $PASS"
-echo "FAILED $FAIL"
+if [ "$MODE" = "results" ]; then
+	ccache -s # show ccache stats
+	echo "TOTAL $((PASS+FAIL))"
+	echo "PASSED $PASS"
+	echo "FAILED $FAIL"
+fi
