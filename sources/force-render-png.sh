@@ -48,7 +48,7 @@ VERSION=$1
 PARSED_VERSION=${VERSION//./}
 
 if [ "$MODE" = "results" ]; then 
-	SYNFIG="/usr/bin/synfig"
+	SYNFIG="$HOME/synfig/bin/synfig"
 elif [ $PARSED_VERSION -lt 120 ]; then
 	get-synfig-tar $VERSION
 elif [ $PARSED_VERSION -eq 120 ]; then
