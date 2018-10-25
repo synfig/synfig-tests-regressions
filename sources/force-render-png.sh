@@ -104,7 +104,7 @@ for COMPONENT in $COMPONENTS; do
 					else
 						echo "SNAME failed"
 						FAIL=$((FAIL+1))
-						FAILED_TEST="$FAILED_TEST \n $NAME"
+						FAILED_TEST="$FAILED_TEST $NAME \n"
 					fi
 				fi
 			done
@@ -119,5 +119,6 @@ if [ "$MODE" = "results" ]; then
 	echo "TOTAL $((PASS+FAIL))"
 	echo "PASSED $PASS"
 	echo "FAILED $FAIL"
-	echo "FAILED TESTS \n $FAILED_TEST"
+	echo "FAILED TESTS"
+	printf "$FAILED_TEST"
 fi
