@@ -8,7 +8,7 @@ THRESHOLD=5000
 MODE=$1
 PASS=0
 FAIL=0
-
+FAILED_TEST=""
 SYNFIG_OPTION=""
 
 if [ "$MODE" = "references" ]; then
@@ -104,6 +104,7 @@ for COMPONENT in $COMPONENTS; do
 					else
 						echo "SNAME failed"
 						FAIL=$((FAIL+1))
+						FAILED_TEST="$FAILED_TEST \n $NAME"
 					fi
 				fi
 			done
@@ -118,4 +119,5 @@ if [ "$MODE" = "results" ]; then
 	echo "TOTAL $((PASS+FAIL))"
 	echo "PASSED $PASS"
 	echo "FAILED $FAIL"
+	echo "FAILED TESTS \n $FAILED_TEST"
 fi
