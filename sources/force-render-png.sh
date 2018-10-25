@@ -4,7 +4,7 @@ set -x
 
 SCRIPT_DIR=$(cd `dirname "$0"`; pwd)
 
-
+THRESHOLD=5000
 MODE=$1
 PASS=0
 FAIL=0
@@ -96,7 +96,9 @@ for COMPONENT in $COMPONENTS; do
 				fi
 				if [ "$MODE" = "results" ]; then
 					TEST=$(compare -metric RMSE $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"$NAME".png  $CURRENT_DIR/../../../references/$COMPONENT/$dir/"$NAME".png NULL 2>&1)
-					if echo "$TEST" | grep -q "0 (0)"; then
+					TEST=${TEST% *}
+					TEST=${TEST%.*}
+					if [ $TEST -lt $THRESHOLD ]; then
 						echo "$NAME passed"
 						PASS=$((PASS+1))
 					else
