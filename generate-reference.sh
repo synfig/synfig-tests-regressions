@@ -64,7 +64,7 @@ for file in $CHANGED_FILES; do
 	if [ "$EXT" = "txt" ]; then
 		if [ "$NAME" = "default-version" ]; then
 			# run force generate png
-			bash sources/force-render-png.sh
+			bash sources/force-render-png.sh references
 		else
 			# just run for one dir
 			pushd $DIR
