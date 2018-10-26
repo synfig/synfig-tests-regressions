@@ -115,7 +115,6 @@ for COMPONENT in $COMPONENTS; do
 done
 
 if [ "$MODE" = "results" ]; then
-	ccache -s # show ccache stats
 	echo "TOTAL $((PASS+FAIL))"
 	echo "PASSED $PASS"
 	echo "FAILED $FAIL"
