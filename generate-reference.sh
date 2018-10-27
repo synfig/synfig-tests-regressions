@@ -43,6 +43,8 @@ elif [ $PARSED_VERSION -eq 121 ]; then
 	get-synfig-appimage $VERSION "1.2.1-64bit"
 elif [ $PARSED_VERSION -eq 122 ]; then
 	get-synfig-appimage $VERSION "18.09.14-linux64-286f1" "https://sourceforge.net/projects/synfig/files/releases/1.2.2/SynfigStudio-1.2.2-18.09.14-linux64-286f1.appimage/download"
+elif [ $PARSED_VERSION -eq 131020181026 ]; then
+	get-synfig-appimage $VERSION "1.3.10.2018.10.26" "https://dev.icystar.com/downloads/SynfigStudio-1.3.10-testing-18.10.18-linux64-defe1.appimage"
 fi
 }
 
@@ -61,6 +63,11 @@ for file in $CHANGED_FILES; do
 	NAME=${file##*/}
 	NAME=${NAME%.*}
 
+	# eg: sources/layers/rectangle/rectangle-0.sif
+	# EXT = "sif"
+	# DIR = "sources/layers/rectangle"
+	# NAME = "rectangle-0"
+
 	if [ "$EXT" = "txt" ]; then
 		if [ "$NAME" = "default-version" ]; then
 			# run force generate png
@@ -72,6 +79,10 @@ for file in $CHANGED_FILES; do
 			get-synfig $VERSION
 			mkdir -p ${TRAVIS_BUILD_DIR}/$DIR/../../../references/${DIR#*/}
 			for sample in * ; do
+				if [ -f "${TRAVIS_BUILD_DIR}/$DIR/$NAME.txt" ]; then
+					EXP_VERSION=`cat $NAME.txt`
+					get-synfig $EXP_VERSION
+				fi
 				if [ "${sample##*.}" = "sif" ]; then
 					if [ -f "${TRAVIS_BUILD_DIR}/$DIR/$sample" ]; then
 						$SYNFIG -v 10 --time 0 -i "${TRAVIS_BUILD_DIR}/$DIR/$sample" -o ${TRAVIS_BUILD_DIR}/$DIR/../../../references/${DIR#*/}/${sample%.*}.png
@@ -81,9 +92,12 @@ for file in $CHANGED_FILES; do
 			popd
 		fi
 	elif [ "$EXT" = "sif" ]; then
+		# PARENT_DIR = "rectangle"
 		PARENT_DIR=${DIR##*/}
 		pushd $DIR
-		if [ -f $NAME.txt ]; then
+		if [ -f "${TRAVIS_BUILD_DIR}/$DIR/$PARENT_DIR.txt" ]; then
+			VERSION=`cat $PARENT_DIR.txt`
+		elif [ -f "${TRAVIS_BUILD_DIR}/$DIR/$NAME.txt" ]; then
 			VERSION=`cat $NAME.txt`
 		else
 			VERSION=`cat "${TRAVIS_BUILD_DIR}/sources/default-version.txt"`
