@@ -57,6 +57,8 @@ elif [ $PARSED_VERSION -eq 121 ]; then
 	get-synfig-appimage $VERSION "1.2.1-64bit"
 elif [ $PARSED_VERSION -eq 122 ]; then
 	get-synfig-appimage $VERSION "18.09.14-linux64-286f1" "https://sourceforge.net/projects/synfig/files/releases/1.2.2/SynfigStudio-1.2.2-18.09.14-linux64-286f1.appimage/download"
+elif [ $PARSED_VERSION -eq 131020181026 ]; then
+	get-synfig-appimage $VERSION "1.3.10.2018.10.26" "https://dev.icystar.com/downloads/SynfigStudio-1.3.10-testing-18.10.18-linux64-defe1.appimage"
 fi
 }
 
@@ -91,6 +93,10 @@ for COMPONENT in $COMPONENTS; do
 				# Renders every sif file present 
 				NAME=${sample%.*}
 				EXT=${sample##*.}
+				if [ -f "$CURRENT_DIR/$NAME.txt" ]; then
+					EXP_VERSION=`cat "$CURRENT_DIR/$NAME.txt"`
+					get-synfig $EXP_VERSION
+				fi
 				if [ "$EXT" = "sif" ]; then
 					$SYNFIG --time 0 -i $CURRENT_DIR/$sample -o $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"$NAME".png &> /dev/null
 				fi
