@@ -98,7 +98,7 @@ for COMPONENT in $COMPONENTS; do
 					get-synfig $EXP_VERSION
 				fi
 				if [ "$EXT" = "sif" ]; then
-					$SYNFIG --time 0 -i $CURRENT_DIR/$sample -o $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"$NAME".png &> /dev/null
+					$SYNFIG --time 0 -i $CURRENT_DIR/$sample -o $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"$NAME".png
 				fi
 				if [ "$MODE" = "results" ]; then
 					TEST=$(compare -metric RMSE $CURRENT_DIR/../../../$MODE/$COMPONENT/$dir/"$NAME".png  $CURRENT_DIR/../../../references/$COMPONENT/$dir/"$NAME".png NULL 2>&1)
