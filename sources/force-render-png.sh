@@ -93,6 +93,7 @@ for COMPONENT in $COMPONENTS; do
 				# Renders every sif file present 
 				NAME=${sample%.*}
 				EXT=${sample##*.}
+				get-synfig $VERSION
 				if [ -f "$CURRENT_DIR/$NAME.txt" ]; then
 					EXP_VERSION=`cat "$CURRENT_DIR/$NAME.txt"`
 					get-synfig $EXP_VERSION
