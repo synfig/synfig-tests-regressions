@@ -77,9 +77,9 @@ for file in $CHANGED_FILES; do
 			# just run for one dir
 			pushd $DIR
 			VERSION=`cat $NAME.txt`
-			get-synfig $VERSION
 			mkdir -p ${TRAVIS_BUILD_DIR}/$DIR/../../../references/${DIR#*/}
 			for sample in * ; do
+				get-synfig $VERSION
 				if [ -f "${TRAVIS_BUILD_DIR}/$DIR/$NAME.txt" ]; then
 					EXP_VERSION=`cat $NAME.txt`
 					get-synfig $EXP_VERSION
