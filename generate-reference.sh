@@ -27,7 +27,7 @@ if [ ! -d "/tmp/synfig-$VERSION.appimage" ]; then
 	else
 		LINK="https://sourceforge.net/projects/synfig/files/releases/$VERSION/linux/synfigstudio-$2.appimage/download"
 	fi
-	wget --quiet $LINK -O "/tmp/synfig-$VERSION.appimage"
+	wget --no-check-certificate --quiet $LINK -O "/tmp/synfig-$VERSION.appimage"
 	chmod +x /tmp/synfig-$VERSION.appimage
 fi
 }
