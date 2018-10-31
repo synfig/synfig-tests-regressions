@@ -1,6 +1,6 @@
 #!/bin/bash
 
-#set -x
+set -x
 set -e
 
 SCRIPT_DIR=$(cd `dirname "$0"`; pwd)
