@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #set -x
+set -e
 
 SCRIPT_DIR=$(cd `dirname "$0"`; pwd)
 
@@ -85,6 +86,7 @@ for COMPONENT in $COMPONENTS; do
 			if [ ! -d "/tmp/synfig-$VERSION" ]; then
 				get-synfig $VERSION
 			fi
+			[ -d "../../../$MODE" ] || mkdir -p "../../../$MODE"
 			pushd ../../../$MODE
 			mkdir -p ./$COMPONENT/$dir
 			popd
