@@ -33,7 +33,7 @@ fi
 
 get-synfig-appimage () {
 SYNFIG="/tmp/synfig-$VERSION.appimage --appimage-exec synfig $SYNFIG_OPTION" 
-if [ ! -d "/tmp/synfig-$VERSION.appimage" ]; then
+if [ ! -e "/tmp/synfig-$VERSION.appimage" ]; then
 	if [ "$#" -eq 3 ]; then
 		LINK=$3
 	else

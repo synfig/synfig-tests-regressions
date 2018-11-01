@@ -21,7 +21,7 @@ fi
 
 get-synfig-appimage () {
 SYNFIG="/tmp/synfig-$VERSION.appimage --appimage-exec synfig" 
-if [ ! -d "/tmp/synfig-$VERSION.appimage" ]; then
+if [ ! -e "/tmp/synfig-$VERSION.appimage" ]; then
 	if [ "$#" -eq 3 ]; then
 		LINK=$3
 	else
