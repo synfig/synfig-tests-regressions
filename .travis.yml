@@ -2,7 +2,7 @@ language: generic
 os: linux
 dist: xenial
 script:
-- if [ $TRAVIS_EVENT_TYPE == "push" ] && [[ $TRAVIS_TAG != "current" ]]; then $TRAVIS_BUILD_DIR/generate-reference.sh;
+- if [ $TRAVIS_EVENT_TYPE == "push" ] && [[ $TRAVIS_TAG != "current" ]]; then $TRAVIS_BUILD_DIR/render.sh references;
   fi
 after_success:
 - if [ $TRAVIS_EVENT_TYPE == "push" ] && [[ $TRAVIS_TAG != "current" ]]; then $TRAVIS_BUILD_DIR/deploy-reference.sh;
