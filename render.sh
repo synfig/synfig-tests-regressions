@@ -174,17 +174,20 @@ for file in $CHANGED_FILES; do
 	DIR=${file%/*}
 	NAME=${file##*/}
 	NAME=${NAME%.*}
+	PARENT_DIR_NAME=${DIR##*/}
 
 	# eg: sources/layers/rectangle/rectangle-0.sif
 	# EXT = "sif"
 	# DIR = "sources/layers/rectangle"
 	# NAME = "rectangle-0"
 
-	if [ $(echo $NAME | grep -i '-') ]; then
-		# just a single file is changed be it .txt or .sif
-		render-only-one-file "$TRAVIS_BUILD_DIR/$file"
-	else
-		# we need to render a whole directory
-		render-only-one-dir $file
+	if [ "$EXT" = "sif" ]; then
+		render-only-one-file $file
+	elif [ "$EXT" = "txt" ]; then	
+		if [ "$PARENT_DIR_NAME" = "$NAME" ]; then
+			render-only-one-dir $file
+		else	
+			render-only-one-file "$TRAVIS_BUILD_DIR/$file"
+   		fi
 	fi
 done
