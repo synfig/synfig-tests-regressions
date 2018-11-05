@@ -1,11 +1,8 @@
 #!/bin/bash
 
-set -x
+#set -x
 
 # Gets required version of synfig
-
-#TRAVIS_COMMIT_RANGE="88050ae37f95...bd64d25af949"
-#TRAVIS_BUILD_DIR="/home/reshabh/synfig-tests-regressions"
 
 MODE=$1 # references / results
 
@@ -79,11 +76,15 @@ test-result () {
 
 set-version () {
 	FILE=$1
-	
-	# FILE="sources/layers/circle/circle-radius-0.txt"
-	
+
+	pushd $TRAVIS_BUILD_DIR
+	# FILE="/home/reSHARMA/synfig-test-regressions/sources/layers/circle/circle-radius-0.txt"
+
+	TEMP=$TRAVIS_BUILD_DIR
+	FILE=${FILE##*$TEMP/} # TODO: do this in a better way 
 	IFS='/'
 	read -r -a array <<< "$FILE"
+	unset IFS
 	
 	# array={sources, layers, circle, circle-radius-0.txt}
 	
@@ -97,26 +98,30 @@ set-version () {
 
 	NAME=${array[$size - 1]}
 	unset "array[$size - 1]"
-
 	for element in "${array[@]}"
 	do
-		pushd element
+		cd $element && \
 		if [ -f "$element.txt" ]; then
 			VERSION=`cat $element.txt`
 		fi
-	done
-
+	done && \
 	if [ -f "$NAME.txt" ]; then
 		VERSION=`cat $NAME.txt`
 	fi
+	for element in "${array[@]}"
+	do
+		cd ../
+	done
+	popd
 }
 
 synfig-render () {
 	FILE=$1
 	NAME=${FILE##*sources/} # TODO: do this in a better way 
 	NAME=${NAME%.*}
-	if [ -f "${TRAVIS_BUILD_DIR}/$NAME.sif" ]; then
-		$SYNFIG -v 10 --time 0 -i "${TRAVIS_BUILD_DIR}/sources/$NAME.sif" -o "${TRAVIS_BUILD_DIR}/$MODE/$NAME.png"
+	FILE=${FILE%.*}
+	if [[ -f "${TRAVIS_BUILD_DIR}/$FILE.sif" ]]; then
+		$SYNFIG -v 10 --time 0 -i "${TRAVIS_BUILD_DIR}/$FILE.sif" -o "${TRAVIS_BUILD_DIR}/sources/../$MODE/$NAME.png"
 		if [ "$MODE" = "results" ]; then
 			test-result $NAME
 		fi
@@ -127,17 +132,20 @@ render-only-one-file () {
 	FILE=$1
 	set-version $FILE
 	get-synfig $VERSION
-	synfig-render $file
+	synfig-render $FILE
 }
 
 render-dir () {
 	DIR=$1
-	pushd $DIR
+	cd $DIR && \
 	for file in *; do
-		if [ -f $file ]; then
-			render-only-one-file "$DIR/$file"
-		else
-			render-dir "$DIR/$file"
+		if [[ -e $1/$file ]]; then
+			if [[ -f $1/$file ]]; then
+				pwd
+				render-only-one-file "$1/$file"
+			else
+				render-dir "$1/$file"
+			fi
 		fi
 	done
 }
@@ -145,7 +153,7 @@ render-dir () {
 render-only-one-dir () {
 	FILE=$1
 	DIR=${FILE%/*}
-	render-dir $DIR
+	render-dir "$TRAVIS_BUILD_DIR/$DIR"
 }
 
 # Get the modified files from the commit 
@@ -165,7 +173,7 @@ for file in $CHANGED_FILES; do
 
 	if [ $(echo $NAME | grep -i '-') ]; then
 		# just a single file is changed be it .txt or .sif
-		render-only-one-file $file
+		render-only-one-file "$TRAVIS_BUILD_DIR/$file"
 	else
 		# we need to render a whole directory
 		render-only-one-dir $file
