@@ -33,7 +33,7 @@ get-synfig-appimage () {
 		else
 			LINK="https://sourceforge.net/projects/synfig/files/releases/$VERSION/linux/synfigstudio-$2.appimage/download"
 		fi
-		wget --quiet $LINK -O "/tmp/synfig-$VERSION.appimage"
+		wget --quiet --no-check-certificate $LINK -O "/tmp/synfig-$VERSION.appimage"
 		chmod +x /tmp/synfig-$VERSION.appimage
 	fi
 }
