@@ -158,7 +158,16 @@ render-only-one-dir () {
 
 # Get the modified files from the commit 
 
-CHANGED_FILES=`git diff --name-only $TRAVIS_COMMIT_RANGE`
+if [ -z "$TRAVIS_BUILD_DIR" ]; then
+   TRAVIS_BUILD_DIR=$(cd `dirname "$0"`; pwd) # gets directory of current script
+fi
+cd "$TRAVIS_BUILD_DIR"
+if [ -z "$TRAVIS_COMMIT_RANGE" ]; then
+   # rebuild everything
+   CHANGED_FILES="sources/sources.txt"
+else
+   CHANGED_FILES=`git diff --name-only $TRAVIS_COMMIT_RANGE`
+fi
 
 for file in $CHANGED_FILES; do
 	EXT=${file##*.}
