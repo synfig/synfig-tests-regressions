@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<canvas version="1.0" width="300" height="200" xres="2952.755900" yres="2952.755900" view-box="-2.150000 1.000000 0.850000 -1.000000" antialias="2" fps="30.000" begin-time="0f" end-time="20s" bgcolor="0.500000 0.500000 0.500000 1.000000">
+  <name>Untitled0</name>
+  <meta name="background_first_color" content="0.880000 0.880000 0.880000"/>
+  <meta name="background_second_color" content="0.650000 0.650000 0.650000"/>
+  <meta name="background_size" content="15.000000 15.000000"/>
+  <meta name="grid_color" content="0.623529 0.623529 0.623529"/>
+  <meta name="grid_show" content="0"/>
+  <meta name="grid_size" content="0.250000 0.250000"/>
+  <meta name="grid_snap" content="0"/>
+  <meta name="guide_color" content="0.435294 0.435294 1.000000"/>
+  <meta name="guide_show" content="1"/>
+  <meta name="guide_snap" content="0"/>
+  <meta name="jack_offset" content="0.000000"/>
+  <meta name="onion_skin" content="0"/>
+  <meta name="onion_skin_future" content="0"/>
+  <meta name="onion_skin_past" content="1"/>
+  <layer type="SolidColor" active="true" exclude_from_rendering="false" version="0.1">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="blend_method">
+      <integer value="0"/>
+    </param>
+    <param name="color">
+      <color>
+        <r>0.750000</r>
+        <g>0.750000</g>
+        <b>0.750000</b>
+        <a>1.000000</a>
+      </color>
+    </param>
+  </layer>
+  <layer type="checker_board" active="true" exclude_from_rendering="false" version="0.1">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="blend_method">
+      <integer value="0"/>
+    </param>
+    <param name="color">
+      <color>
+        <r>0.500000</r>
+        <g>0.500000</g>
+        <b>0.500000</b>
+        <a>1.000000</a>
+      </color>
+    </param>
+    <param name="origin">
+      <vector>
+        <x>0.1250000000</x>
+        <y>0.1250000000</y>
+      </vector>
+    </param>
+    <param name="size">
+      <vector>
+        <x>0.2500000000</x>
+        <y>0.2500000000</y>
+      </vector>
+    </param>
+  </layer>
+  <layer type="mandelbrot" active="true" exclude_from_rendering="false" version="0.2">
+    <param name="iterations">
+      <integer value="94"/>
+    </param>
+    <param name="bailout">
+      <real value="2.0000000000"/>
+    </param>
+    <param name="broken">
+      <bool value="false"/>
+    </param>
+    <param name="distort_inside">
+      <bool value="true"/>
+    </param>
+    <param name="shade_inside">
+      <bool value="true"/>
+    </param>
+    <param name="solid_inside">
+      <bool value="false"/>
+    </param>
+    <param name="invert_inside">
+      <bool value="false"/>
+    </param>
+    <param name="gradient_inside">
+      <gradient>
+        <color pos="0.000000">
+          <r>0.000000</r>
+          <g>0.000000</g>
+          <b>0.000000</b>
+          <a>0.000000</a>
+        </color>
+        <color pos="1.000000">
+          <r>0.000000</r>
+          <g>0.000000</g>
+          <b>0.000000</b>
+          <a>1.000000</a>
+        </color>
+      </gradient>
+    </param>
+    <param name="gradient_offset_inside">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="gradient_loop_inside">
+      <bool value="true"/>
+    </param>
+    <param name="distort_outside">
+      <bool value="true"/>
+    </param>
+    <param name="shade_outside">
+      <bool value="true"/>
+    </param>
+    <param name="solid_outside">
+      <bool value="false"/>
+    </param>
+    <param name="invert_outside">
+      <bool value="false"/>
+    </param>
+    <param name="gradient_outside">
+      <gradient>
+        <color pos="0.000000">
+          <r>0.000000</r>
+          <g>0.000000</g>
+          <b>0.000000</b>
+          <a>0.000000</a>
+        </color>
+        <color pos="1.000000">
+          <r>0.000000</r>
+          <g>0.000000</g>
+          <b>0.000000</b>
+          <a>1.000000</a>
+        </color>
+      </gradient>
+    </param>
+    <param name="smooth_outside">
+      <bool value="true"/>
+    </param>
+    <param name="gradient_offset_outside">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="gradient_scale_outside">
+      <real value="1.0000000000"/>
+    </param>
+  </layer>
+  <layer type="zoom" active="true" exclude_from_rendering="false" version="0.1">
+    <param name="amount">
+      <animated type="real">
+        <waypoint time="0s" before="auto" after="auto">
+          <real value="0.0000000000"/>
+        </waypoint>
+        <waypoint time="20s" before="auto" after="auto">
+          <real value="22.7500003241"/>
+        </waypoint>
+      </animated>
+    </param>
+    <param name="center">
+      <vector>
+        <x>0.3702099323</x>
+        <y>0.3603981137</y>
+      </vector>
+    </param>
+  </layer>
+  <layer type="translate" active="true" exclude_from_rendering="false" version="0.1">
+    <param name="origin">
+      <animated type="vector">
+        <waypoint time="0s" before="auto" after="auto">
+          <vector>
+            <x>0.0000000000</x>
+            <y>0.0000000000</y>
+          </vector>
+        </waypoint>
+        <waypoint time="1.95600009s" before="auto" after="auto">
+          <vector>
+            <x>-1.1840960979</x>
+            <y>-0.2352941185</y>
+          </vector>
+        </waypoint>
+        <waypoint time="2.70700002s" before="auto" after="auto">
+          <vector>
+            <x>-1.8311548233</x>
+            <y>-0.0980392173</y>
+          </vector>
+        </waypoint>
+        <waypoint time="4.38399982s" before="auto" after="auto">
+          <vector>
+            <x>-0.9095862508</x>
+            <y>-0.3921568692</y>
+          </vector>
+        </waypoint>
+        <waypoint time="7.05100012s" before="auto" after="auto">
+          <vector>
+            <x>-0.8060567379</x>
+            <y>-0.1699999869</y>
+          </vector>
+        </waypoint>
+        <waypoint time="7.83300018s" before="auto" after="auto">
+          <vector>
+            <x>-0.3213509619</x>
+            <y>0.3921568692</y>
+          </vector>
+        </waypoint>
+        <waypoint time="8.48400021s" before="auto" after="auto">
+          <vector>
+            <x>-0.6760568619</x>
+            <y>0.2300000042</y>
+          </vector>
+        </waypoint>
+        <waypoint time="9.3760004s" before="auto" after="auto">
+          <vector>
+            <x>-0.0272333082</x>
+            <y>0.1568627506</y>
+          </vector>
+        </waypoint>
+        <waypoint time="10.47500038s" before="auto" after="auto">
+          <vector>
+            <x>-0.0468411520</x>
+            <y>0.5490196347</y>
+          </vector>
+        </waypoint>
+        <waypoint time="11.51099968s" before="auto" after="auto">
+          <vector>
+            <x>-0.8160568476</x>
+            <y>0.4300000072</y>
+          </vector>
+        </waypoint>
+        <waypoint time="14.34399986s" before="auto" after="auto">
+          <vector>
+            <x>0.0039431616</x>
+            <y>0.3400000036</y>
+          </vector>
+        </waypoint>
+        <waypoint time="15.47799969s" before="auto" after="auto">
+          <vector>
+            <x>0.0119823776</x>
+            <y>0.3725490272</y>
+          </vector>
+        </waypoint>
+        <waypoint time="16.65299988s" before="auto" after="auto">
+          <vector>
+            <x>-0.9060568213</x>
+            <y>0.3300000131</y>
+          </vector>
+        </waypoint>
+        <waypoint time="20s" before="auto" after="auto">
+          <vector>
+            <x>-0.8560568094</x>
+            <y>-0.7400000095</y>
+          </vector>
+        </waypoint>
+      </animated>
+    </param>
+  </layer>
+  <layer type="rotate" active="true" exclude_from_rendering="false" version="0.1">
+    <param name="origin">
+      <animated type="vector">
+        <waypoint time="0s" before="auto" after="auto">
+          <vector>
+            <x>0.0000000000</x>
+            <y>0.0000000000</y>
+          </vector>
+        </waypoint>
+        <waypoint time="1.93900001s" before="auto" after="auto">
+          <vector>
+            <x>-0.6499999762</x>
+            <y>0.8000000119</y>
+          </vector>
+        </waypoint>
+        <waypoint time="2.704s" before="auto" after="auto">
+          <vector>
+            <x>-1.1100000143</x>
+            <y>0.3000000119</y>
+          </vector>
+        </waypoint>
+        <waypoint time="6.13899994s" before="auto" after="auto">
+          <vector>
+            <x>-0.0000001323</x>
+            <y>0.0000000000</y>
+          </vector>
+        </waypoint>
+        <waypoint time="11.90499973s" before="auto" after="auto">
+          <vector>
+            <x>-0.5617647171</x>
+            <y>-0.1176470593</y>
+          </vector>
+        </waypoint>
+      </animated>
+    </param>
+    <param name="amount">
+      <animated type="angle">
+        <waypoint time="0s" before="linear" after="linear">
+          <angle value="0.000000"/>
+        </waypoint>
+        <waypoint time="1.95600009s" before="linear" after="linear">
+          <angle value="34.000000"/>
+        </waypoint>
+        <waypoint time="2.704s" before="linear" after="linear">
+          <angle value="41.000000"/>
+        </waypoint>
+        <waypoint time="4.40500021s" before="linear" after="linear">
+          <angle value="-22.780001"/>
+        </waypoint>
+        <waypoint time="7.01300001s" before="linear" after="linear">
+          <angle value="-202.609970"/>
+        </waypoint>
+        <waypoint time="8.10200024s" before="linear" after="linear">
+          <angle value="-297.609985"/>
+        </waypoint>
+        <waypoint time="10.4989996s" before="linear" after="linear">
+          <angle value="-369.609955"/>
+        </waypoint>
+        <waypoint time="12.85700035s" before="linear" after="linear">
+          <angle value="-432.609985"/>
+        </waypoint>
+      </animated>
+    </param>
+  </layer>
+  <layer type="blur" active="false" exclude_from_rendering="false" version="0.2">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <real value="0.7500000000"/>
+    </param>
+    <param name="blend_method">
+      <integer value="5"/>
+    </param>
+    <param name="size">
+      <vector>
+        <x>0.1000000015</x>
+        <y>0.1000000015</y>
+      </vector>
+    </param>
+    <param name="type">
+      <integer value="1"/>
+    </param>
+  </layer>
+  <layer type="SolidColor" active="false" exclude_from_rendering="false" version="0.1">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="blend_method">
+      <integer value="6"/>
+    </param>
+    <param name="color">
+      <color>
+        <r>2.000000</r>
+        <g>2.000000</g>
+        <b>2.000000</b>
+        <a>1.000000</a>
+      </color>
+    </param>
+  </layer>
+  <layer type="super_sample" active="false" exclude_from_rendering="false" version="0.1">
+    <param name="width">
+      <integer value="2"/>
+    </param>
+    <param name="height">
+      <integer value="2"/>
+    </param>
+    <param name="scanline">
+      <bool value="false"/>
+    </param>
+    <param name="alpha_aware">
+      <bool value="true"/>
+    </param>
+  </layer>
+</canvas>
