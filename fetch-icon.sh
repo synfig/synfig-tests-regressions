@@ -1,6 +1,6 @@
 #!/bin/bash
 
-CURRENT_DIR=$(pwd)
+CURRENT_DIR=$(cd `dirname "$0"`; pwd)
 DIR=/tmp/images
 
 
