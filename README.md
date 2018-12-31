@@ -17,4 +17,4 @@ Please check this link for details - https://github.com/synfig/synfig/issues/634
 
 * Create pull requests and submit [issues](https://github.com/njackwinterofcode/synfig-tests-regressions/issues)
 
-<p align="center"> Made with ❤️ by [Konstantin Dmitriev](https://github.com/morevnaproject)</p>
+<p align="center">Made with ❤️ by <b>Synfig contributors</b></p>
