@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #set -x
+set -e
 
 # Gets required version of synfig
 
