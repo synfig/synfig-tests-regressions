@@ -762,7 +762,7 @@
     </param>
     <param name="canvas">
       <canvas>
-        <layer type="group" active="true" exclude_from_rendering="false" version="0.2" desc="logo.sifz">
+        <layer type="group" active="true" exclude_from_rendering="false" version="0.2" desc="logo.sif">
           <param name="z_depth">
             <real value="0.0000000000"/>
           </param>
@@ -800,7 +800,7 @@
               </scale>
             </composite>
           </param>
-          <param name="canvas" use="logo.sifz#"/>
+          <param name="canvas" use="logo.sif#"/>
           <param name="time_dilation">
             <real value="1.0000000000"/>
           </param>

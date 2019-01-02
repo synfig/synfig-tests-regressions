@@ -790,7 +790,7 @@ http://synfig.com/</string>
                   </scale>
                 </composite>
               </param>
-              <param name="canvas" use="logo.sifz#"/>
+              <param name="canvas" use="logo.sif#"/>
               <param name="time_dilation">
                 <real value="1.0000000000"/>
               </param>
