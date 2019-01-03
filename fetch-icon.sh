@@ -30,10 +30,6 @@ if [ -d "$DIR" ]; then
     rm -rf "$DIR"
 fi
 
-
-svn checkout https://github.com/synfig/synfig/trunk/synfig-studio/images /tmp/images/
-
-
 #svn checkout the images to DIR=/tmp/images
 svn checkout https://github.com/synfig/synfig/trunk/synfig-studio/images /tmp/images/
 
