@@ -118,8 +118,8 @@ set-version () {
 
 synfig-render () {
 	FILE=$1
-	NAME=${FILE##*sources/} # TODO: do this in a better way 
-    DIR=${NAME%/*}	
+	NAME=${FILE##*sources/} # TODO: do this in a better way
+	DIR=${NAME%/*}	
 	NAME=${NAME%.*}
 	FILE=${FILE%.*}
 	if [[ -f "${TRAVIS_BUILD_DIR}/$FILE.sif" ]]; then
