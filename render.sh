@@ -119,10 +119,15 @@ set-version () {
 synfig-render () {
 	FILE=$1
 	NAME=${FILE##*sources/} # TODO: do this in a better way 
+    DIR=${NAME%/*}	
 	NAME=${NAME%.*}
 	FILE=${FILE%.*}
 	if [[ -f "${TRAVIS_BUILD_DIR}/$FILE.sif" ]]; then
-		$SYNFIG -v 10 --time 0 -i "${TRAVIS_BUILD_DIR}/$FILE.sif" -o "${TRAVIS_BUILD_DIR}/sources/../$MODE/$NAME.png"
+        if [ ! -d "${TRAVIS_BUILD_DIR}/$MODE/$DIR" ]; then
+            mkdir -p "${TRAVIS_BUILD_DIR}/$MODE/$DIR"
+            echo $DIR" created...."
+        fi
+		$SYNFIG -v 10 --time 0 -i "${TRAVIS_BUILD_DIR}/$FILE.sif" -o "${TRAVIS_BUILD_DIR}/$MODE/$NAME.png"
 		if [ "$MODE" = "results" ]; then
 			test-result $NAME
 		fi
