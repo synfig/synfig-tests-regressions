@@ -93,18 +93,6 @@
           <param name="invert">
             <bool value="false"/>
           </param>
-          <param name="feather_x">
-            <real value="0.0000000000"/>
-          </param>
-          <param name="feather_y">
-            <real value="0.0000000000"/>
-          </param>
-          <param name="bevel">
-            <real value="0.0000000000"/>
-          </param>
-          <param name="bevCircle">
-            <bool value="true"/>
-          </param>
         </layer>
         <layer type="rectangle" active="true" exclude_from_rendering="false" version="0.2" desc="Rectangle002">
           <param name="z_depth">
@@ -141,18 +129,6 @@
           </param>
           <param name="invert">
             <bool value="false"/>
-          </param>
-          <param name="feather_x">
-            <real value="0.0000000000"/>
-          </param>
-          <param name="feather_y">
-            <real value="0.0000000000"/>
-          </param>
-          <param name="bevel">
-            <real value="0.0000000000"/>
-          </param>
-          <param name="bevCircle">
-            <bool value="true"/>
           </param>
         </layer>
       </canvas>
