@@ -62,7 +62,7 @@ get-synfig () {
 
 test-result () {
 	NAME=$1
-	TEST=$(compare -metric RMSE $TRAVIS_BUILD_DIR/references/$NAME.png $TRAVIS_BUILD_DIR/results/$NAME.png NULL 2>&1)
+	TEST=$(compare -metric RMSE $TRAVIS_BUILD_DIR/rendering/references/$NAME.png $TRAVIS_BUILD_DIR/rendering/results/$NAME.png NULL 2>&1)
 	TEST=${TEST% *}
 	TEST=${TEST%.*}
 	if [ $TEST -lt $THRESHOLD ]; then
@@ -81,17 +81,17 @@ set-version () {
 	pushd $TRAVIS_BUILD_DIR
 	# FILE="/home/reSHARMA/synfig-test-regressions/sources/layers/circle/circle-radius-0.txt"
 
-	TEMP=$TRAVIS_BUILD_DIR
+	TEMP=${TRAVIS_BUILD_DIR}
 	FILE=${FILE##*$TEMP/} # TODO: do this in a better way 
 	IFS='/'
 	read -r -a array <<< "$FILE"
 	unset IFS
 	
-	# array={sources, layers, circle, circle-radius-0.txt}
+	# array={rendering, sources, layers, circle, circle-radius-0.txt}
 	
 	size=${#array[@]}
 	
-	# size=4
+	# size=5
 
 	array[$size - 1]=${array[$size - 1]%.*}
 
@@ -118,16 +118,16 @@ set-version () {
 
 synfig-render () {
 	FILE=$1
-	NAME=${FILE##*sources/} # TODO: do this in a better way
+	NAME=${FILE##*rendering/sources/} # TODO: do this in a better way
 	DIR=${NAME%/*}	
 	NAME=${NAME%.*}
 	FILE=${FILE%.*}
 	if [[ -f "${TRAVIS_BUILD_DIR}/$FILE.sif" ]]; then
-        if [ ! -d "${TRAVIS_BUILD_DIR}/$MODE/$DIR" ]; then
-            mkdir -p "${TRAVIS_BUILD_DIR}/$MODE/$DIR"
+        if [ ! -d "${TRAVIS_BUILD_DIR}/rendering/$MODE/$DIR" ]; then
+            mkdir -p "${TRAVIS_BUILD_DIR}/rendering/$MODE/$DIR"
             echo $DIR" created...."
         fi
-		$SYNFIG -v 10 --time 0 -i "${TRAVIS_BUILD_DIR}/$FILE.sif" -o "${TRAVIS_BUILD_DIR}/$MODE/$NAME.png"
+		$SYNFIG -v 10 --time 0 -i "${TRAVIS_BUILD_DIR}/$FILE.sif" -o "${TRAVIS_BUILD_DIR}/rendering/$MODE/$NAME.png"
 		if [ "$MODE" = "results" ]; then
 			test-result $NAME
 		fi
@@ -170,9 +170,13 @@ fi
 cd "$TRAVIS_BUILD_DIR"
 if [ -z "$TRAVIS_COMMIT_RANGE" ]; then
    # rebuild everything
-   CHANGED_FILES="sources/sources.txt"
+   CHANGED_FILES="rendering/sources/sources.txt"
 else
    CHANGED_FILES=`git diff --name-only $TRAVIS_COMMIT_RANGE`
+fi
+
+if [ -z "$MODE" ]; then
+	MODE="results"
 fi
 
 for file in $CHANGED_FILES; do

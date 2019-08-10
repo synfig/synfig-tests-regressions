@@ -11,7 +11,7 @@ if [ ! -d "$CURRENT_DIR"/sources/icons ]; then
     echo "Created /sources/icons/ ..."
 fi
 
-#check if svn is installed ,if not them prompt tp install
+#check if svn is installed, if not them prompt to install
 
 if [[ -z $(which svn) ]]; then
     echo "Subversion is not installed."
