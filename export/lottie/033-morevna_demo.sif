@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<canvas version="1.0" width="1920" height="1080" xres="2834.645752" yres="2834.645752" view-box="-4.000000 2.250000 4.000000 -2.250000" antialias="1" fps="24.000" begin-time="0f" end-time="4s 18f" bgcolor="0.500000 0.500000 0.500000 1.000000">
+  <name>Synfig Animation 1</name>
+  <meta name="background_first_color" content="0.880000 0.880000 0.880000"/>
+  <meta name="background_rendering" content="1"/>
+  <meta name="background_second_color" content="0.650000 0.650000 0.650000"/>
+  <meta name="background_size" content="15.000000 15.000000"/>
+  <meta name="grid_color" content="0.623529 0.623529 0.623529"/>
+  <meta name="grid_show" content="0"/>
+  <meta name="grid_size" content="0.250000 0.250000"/>
+  <meta name="grid_snap" content="0"/>
+  <meta name="guide_color" content="0.435294 0.435294 1.000000"/>
+  <meta name="guide_show" content="1"/>
+  <meta name="guide_snap" content="0"/>
+  <meta name="jack_offset" content="0.000000"/>
+  <meta name="onion_skin" content="0"/>
+  <meta name="onion_skin_future" content="0"/>
+  <meta name="onion_skin_past" content="1"/>
+  <keyframe time="0f" active="true"/>
+  <keyframe time="9f" active="true"/>
+  <keyframe time="15f" active="true"/>
+  <keyframe time="1s" active="true"> (Duplicate)</keyframe>
+  <keyframe time="1s 9f" active="true"> (Duplicate)</keyframe>
+  <keyframe time="1s 18f" active="true"> (Duplicate) (Duplicate)</keyframe>
+  <keyframe time="2s 3f" active="true"> (Duplicate) (Duplicate)</keyframe>
+  <keyframe time="2s 12f" active="true"> (Duplicate) (Duplicate) (Duplicate)</keyframe>
+  <keyframe time="2s 21f" active="true"> (Duplicate) (Duplicate) (Duplicate)</keyframe>
+  <keyframe time="3s 6f" active="true"> (Duplicate) (Duplicate) (Duplicate) (Duplicate)</keyframe>
+  <keyframe time="3s 15f" active="true"> (Duplicate) (Duplicate) (Duplicate) (Duplicate)</keyframe>
+  <keyframe time="4s" active="true"> (Duplicate) (Duplicate) (Duplicate) (Duplicate) (Duplicate)</keyframe>
+  <keyframe time="4s 5f" active="true"/>
+  <keyframe time="4s 9f" active="true"> (Duplicate) (Duplicate) (Duplicate) (Duplicate) (Duplicate)</keyframe>
+  <keyframe time="4s 18f" active="true"> (Duplicate) (Duplicate) (Duplicate) (Duplicate) (Duplicate) (Duplicate)</keyframe>
+  <layer type="rectangle" active="true" exclude_from_rendering="false" version="0.2" desc="Rectangle025">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="blend_method">
+      <integer value="0"/>
+    </param>
+    <param name="color">
+      <color>
+        <r>1.000000</r>
+        <g>0.924508</g>
+        <b>0.924508</b>
+        <a>1.000000</a>
+      </color>
+    </param>
+    <param name="point1">
+      <vector>
+        <x>-4.0443549156</x>
+        <y>2.2588922977</y>
+      </vector>
+    </param>
+    <param name="point2">
+      <vector>
+        <x>3.9859359264</x>
+        <y>-2.0033605099</y>
+      </vector>
+    </param>
+    <param name="expand">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="invert">
+      <bool value="false"/>
+    </param>
+    <param name="feather_x">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="feather_y">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="bevel">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="bevCircle">
+      <bool value="true"/>
+    </param>
+  </layer>
+  <layer type="rectangle" active="true" exclude_from_rendering="false" version="0.2" desc="Rectangle023">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="blend_method">
+      <integer value="0"/>
+    </param>
+    <param name="color">
+      <color>
+        <r>0.062106</r>
+        <g>0.062106</g>
+        <b>0.062106</b>
+        <a>1.000000</a>
+      </color>
+    </param>
+    <param name="point1">
+      <vector>
+        <x>-4.0942239761</x>
+        <y>-1.5400105715</y>
+      </vector>
+    </param>
+    <param name="point2">
+      <vector>
+        <x>4.0608334541</x>
+        <y>-2.4220407009</y>
+      </vector>
+    </param>
+    <param name="expand">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="invert">
+      <bool value="false"/>
+    </param>
+    <param name="feather_x">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="feather_y">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="bevel">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="bevCircle">
+      <bool value="true"/>
+    </param>
+  </layer>
+  <layer type="star" active="true" exclude_from_rendering="false" version="0.1" desc="Star011">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="blend_method">
+      <integer value="0"/>
+    </param>
+    <param name="color">
+      <color>
+        <r>0.062106</r>
+        <g>0.062106</g>
+        <b>0.062106</b>
+        <a>1.000000</a>
+      </color>
+    </param>
+    <param name="origin">
+      <animated type="vector">
+        <waypoint time="0s" before="linear" after="linear">
+          <vector>
+            <x>3.7448709011</x>
+            <y>-3.6136372089</y>
+          </vector>
+        </waypoint>
+        <waypoint time="4.75s" before="linear" after="linear">
+          <vector>
+            <x>-3.8701810837</x>
+            <y>-3.6136372089</y>
+          </vector>
+        </waypoint>
+      </animated>
+    </param>
+    <param name="invert">
+      <bool value="false"/>
+    </param>
+    <param name="antialias">
+      <bool value="true"/>
+    </param>
+    <param name="feather">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="blurtype">
+      <integer value="1"/>
+    </param>
+    <param name="winding_style">
+      <integer value="0"/>
+    </param>
+    <param name="radius1">
+      <real value="3.4883056637"/>
+    </param>
+    <param name="radius2">
+      <real value="0.7358694995"/>
+    </param>
+    <param name="angle">
+      <angle value="90.140938"/>
+    </param>
+    <param name="points">
+      <integer value="5"/>
+    </param>
+    <param name="regular_polygon">
+      <bool value="false"/>
+    </param>
+  </layer>
+  <layer type="circle" active="true" exclude_from_rendering="false" version="0.2" desc="Circle043">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <animated type="real">
+        <waypoint time="4s" before="clamped" after="clamped">
+          <real value="1.0000000000"/>
+        </waypoint>
+        <waypoint time="4.20833349s" before="constant" after="constant">
+          <real value="0.0000000000"/>
+        </waypoint>
+      </animated>
+    </param>
+    <param name="blend_method">
+      <integer value="0"/>
+    </param>
+    <param name="color">
+      <color>
+        <r>0.906719</r>
+        <g>0.009391</g>
+        <b>0.009391</b>
+        <a>1.000000</a>
+      </color>
+    </param>
+    <param name="radius">
+      <real value="0.4530802409"/>
+    </param>
+    <param name="feather">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="origin">
+      <animated type="vector">
+        <waypoint time="0s" before="auto" after="auto">
+          <vector guid="3CD50092F39C35604C8331F1742AB636">
+            <x>-3.1592845917</x>
+            <y>1.1104502678</y>
+          </vector>
+        </waypoint>
+        <waypoint time="0.375s" before="auto" after="auto">
+          <vector guid="3CD50092F39C35604C8331F1742AB636">
+            <x>-3.1592845917</x>
+            <y>1.1104502678</y>
+          </vector>
+        </waypoint>
+        <waypoint time="0.625s" before="linear" after="linear">
+          <vector guid="307F0CB65EB778553D804D2C2D86E13D">
+            <x>-3.1592845917</x>
+            <y>-1.0815409422</y>
+          </vector>
+        </waypoint>
+        <waypoint time="1s" before="halt" after="halt">
+          <vector guid="3CD50092F39C35604C8331F1742AB636">
+            <x>-3.1592845917</x>
+            <y>1.1104502678</y>
+          </vector>
+        </waypoint>
+        <waypoint time="1.375s" before="linear" after="linear">
+          <vector guid="307F0CB65EB778553D804D2C2D86E13D">
+            <x>-3.1592845917</x>
+            <y>-1.0815409422</y>
+          </vector>
+        </waypoint>
+        <waypoint time="1.75s" before="halt" after="halt">
+          <vector guid="3CD50092F39C35604C8331F1742AB636">
+            <x>-3.1592845917</x>
+            <y>1.1104502678</y>
+          </vector>
+        </waypoint>
+        <waypoint time="2.125s" before="linear" after="linear">
+          <vector guid="307F0CB65EB778553D804D2C2D86E13D">
+            <x>-3.1592845917</x>
+            <y>-1.0815409422</y>
+          </vector>
+        </waypoint>
+        <waypoint time="2.5s" before="halt" after="halt">
+          <vector guid="3CD50092F39C35604C8331F1742AB636">
+            <x>-3.1592845917</x>
+            <y>1.1104502678</y>
+          </vector>
+        </waypoint>
+        <waypoint time="2.875s" before="linear" after="linear">
+          <vector guid="307F0CB65EB778553D804D2C2D86E13D">
+            <x>-3.1592845917</x>
+            <y>-1.0815409422</y>
+          </vector>
+        </waypoint>
+        <waypoint time="3.25s" before="halt" after="halt">
+          <vector guid="3CD50092F39C35604C8331F1742AB636">
+            <x>-3.1592845917</x>
+            <y>1.1104502678</y>
+          </vector>
+        </waypoint>
+        <waypoint time="3.625s" before="linear" after="linear">
+          <vector guid="307F0CB65EB778553D804D2C2D86E13D">
+            <x>-3.1592845917</x>
+            <y>-1.0815409422</y>
+          </vector>
+        </waypoint>
+        <waypoint time="4s" before="halt" after="halt">
+          <vector guid="3CD50092F39C35604C8331F1742AB636">
+            <x>-3.1592845917</x>
+            <y>1.1104502678</y>
+          </vector>
+        </waypoint>
+        <waypoint time="4.375s" before="linear" after="linear">
+          <vector guid="307F0CB65EB778553D804D2C2D86E13D">
+            <x>-3.1592845917</x>
+            <y>-1.0815409422</y>
+          </vector>
+        </waypoint>
+        <waypoint time="4.75s" before="halt" after="halt">
+          <vector guid="3CD50092F39C35604C8331F1742AB636">
+            <x>-3.1592845917</x>
+            <y>1.1104502678</y>
+          </vector>
+        </waypoint>
+      </animated>
+    </param>
+    <param name="invert">
+      <bool value="false"/>
+    </param>
+  </layer>
+  <layer type="star" active="true" exclude_from_rendering="false" version="0.1" desc="Star012">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <animated type="real">
+        <waypoint time="4s" before="constant" after="constant">
+          <real value="0.0000000000"/>
+        </waypoint>
+        <waypoint time="4.20833349s" before="constant" after="constant">
+          <real value="1.0000000000"/>
+        </waypoint>
+        <waypoint time="4.375s" before="clamped" after="clamped">
+          <real value="1.0000000000"/>
+        </waypoint>
+        <waypoint time="4.75s" before="clamped" after="clamped">
+          <real value="0.0000000000"/>
+        </waypoint>
+      </animated>
+    </param>
+    <param name="blend_method">
+      <integer value="0"/>
+    </param>
+    <param name="color">
+      <color>
+        <r>1.000000</r>
+        <g>0.000000</g>
+        <b>0.000000</b>
+        <a>1.000000</a>
+      </color>
+    </param>
+    <param name="origin">
+      <vector>
+        <x>-3.1488835812</x>
+        <y>0.1502202600</y>
+      </vector>
+    </param>
+    <param name="invert">
+      <bool value="false"/>
+    </param>
+    <param name="antialias">
+      <bool value="true"/>
+    </param>
+    <param name="feather">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="blurtype">
+      <integer value="1"/>
+    </param>
+    <param name="winding_style">
+      <integer value="0"/>
+    </param>
+    <param name="radius1">
+      <animated type="real">
+        <waypoint time="4.20833349s" before="constant" after="constant">
+          <real value="0.5099714143"/>
+        </waypoint>
+        <waypoint time="4.29166651s" before="constant" after="constant">
+          <real value="0.7011752373"/>
+        </waypoint>
+        <waypoint time="4.375s" before="constant" after="linear">
+          <real value="1.0142585426"/>
+        </waypoint>
+        <waypoint time="4.75s" before="clamped" after="clamped">
+          <real value="1.3740254776"/>
+        </waypoint>
+      </animated>
+    </param>
+    <param name="radius2">
+      <animated type="real">
+        <waypoint time="4.20833349s" before="constant" after="constant">
+          <real value="0.1730214494"/>
+        </waypoint>
+        <waypoint time="4.29166651s" before="constant" after="constant">
+          <real value="0.2183563497"/>
+        </waypoint>
+        <waypoint time="4.375s" before="constant" after="linear">
+          <real value="0.3505050758"/>
+        </waypoint>
+        <waypoint time="4.75s" before="clamped" after="clamped">
+          <real value="0.4540344298"/>
+        </waypoint>
+      </animated>
+    </param>
+    <param name="angle">
+      <animated type="angle">
+        <waypoint time="4.20833349s" before="constant" after="constant">
+          <angle value="88.982735"/>
+        </waypoint>
+        <waypoint time="4.29166651s" before="constant" after="constant">
+          <angle value="163.200394"/>
+        </waypoint>
+        <waypoint time="4.375s" before="constant" after="linear">
+          <angle value="197.455795"/>
+        </waypoint>
+        <waypoint time="4.75s" before="clamped" after="clamped">
+          <angle value="250.604599"/>
+        </waypoint>
+      </animated>
+    </param>
+    <param name="points">
+      <integer value="7"/>
+    </param>
+    <param name="regular_polygon">
+      <bool value="false"/>
+    </param>
+  </layer>
+  <layer type="rectangle" active="true" exclude_from_rendering="false" version="0.2" desc="Rectangle024">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <real value="0.5000000000"/>
+    </param>
+    <param name="blend_method">
+      <integer value="0"/>
+    </param>
+    <param name="color">
+      <color>
+        <r>0.000184</r>
+        <g>0.000184</g>
+        <b>0.000184</b>
+        <a>1.000000</a>
+      </color>
+    </param>
+    <param name="point1">
+      <vector>
+        <x>-3.4354712963</x>
+        <y>1.9437273741</y>
+      </vector>
+    </param>
+    <param name="point2">
+      <vector>
+        <x>-2.9099028111</x>
+        <y>1.7844921350</y>
+      </vector>
+    </param>
+    <param name="expand">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="invert">
+      <bool value="false"/>
+    </param>
+    <param name="feather_x">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="feather_y">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="bevel">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="bevCircle">
+      <bool value="true"/>
+    </param>
+  </layer>
+</canvas>

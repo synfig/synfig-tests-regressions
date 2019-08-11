@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<canvas version="1.0" width="480" height="270" xres="2834.645752" yres="2834.645752" view-box="-4.000000 2.250000 4.000000 -2.250000" antialias="1" fps="24.000" begin-time="0f" end-time="4s 5f" bgcolor="0.500000 0.500000 0.500000 1.000000">
+  <name>Synfig Animation 1</name>
+  <meta name="background_first_color" content="0.880000 0.880000 0.880000"/>
+  <meta name="background_rendering" content="1"/>
+  <meta name="background_second_color" content="0.650000 0.650000 0.650000"/>
+  <meta name="background_size" content="15.000000 15.000000"/>
+  <meta name="grid_color" content="0.623529 0.623529 0.623529"/>
+  <meta name="grid_show" content="0"/>
+  <meta name="grid_size" content="0.250000 0.250000"/>
+  <meta name="grid_snap" content="0"/>
+  <meta name="guide_color" content="0.435294 0.435294 1.000000"/>
+  <meta name="guide_show" content="1"/>
+  <meta name="guide_snap" content="0"/>
+  <meta name="guide_x" content="0.000000 0.000000"/>
+  <meta name="jack_offset" content="0.000000"/>
+  <meta name="onion_skin" content="0"/>
+  <meta name="onion_skin_future" content="0"/>
+  <meta name="onion_skin_past" content="1"/>
+  <keyframe time="0f" active="true"/>
+  <layer type="star" active="true" exclude_from_rendering="false" version="0.1">
+    <param name="z_depth">
+      <animated type="real">
+        <waypoint time="0s" before="clamped" after="clamped">
+          <real value="1.0000000000"/>
+        </waypoint>
+        <waypoint time="1s" before="clamped" after="clamped">
+          <real value="0.0000000000"/>
+        </waypoint>
+      </animated>
+    </param>
+    <param name="amount">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="blend_method">
+      <integer value="0" static="true"/>
+    </param>
+    <param name="color">
+      <animated type="color">
+        <waypoint time="0s" before="clamped" after="constant">
+          <color>
+            <r>1.000000</r>
+            <g>0.000000</g>
+            <b>0.716333</b>
+            <a>1.000000</a>
+          </color>
+        </waypoint>
+        <waypoint time="1s" before="clamped" after="clamped">
+          <color>
+            <r>1.000000</r>
+            <g>0.000000</g>
+            <b>0.015959</b>
+            <a>1.000000</a>
+          </color>
+        </waypoint>
+        <waypoint time="2.04166675s" before="clamped" after="clamped">
+          <color>
+            <r>0.023854</r>
+            <g>1.000000</g>
+            <b>0.000000</b>
+            <a>1.000000</a>
+          </color>
+        </waypoint>
+        <waypoint time="3s" before="constant" after="clamped">
+          <color>
+            <r>0.000000</r>
+            <g>0.000000</g>
+            <b>1.000000</b>
+            <a>1.000000</a>
+          </color>
+        </waypoint>
+      </animated>
+    </param>
+    <param name="origin">
+      <animated type="vector" interpolation="auto">
+        <waypoint time="0s" before="clamped" after="clamped" tension="0.200000">
+          <vector>
+            <x>0.3166666627</x>
+            <y>-1.7666666508</y>
+          </vector>
+        </waypoint>
+        <waypoint time="1s" before="clamped" after="clamped">
+          <vector>
+            <x>-3.6849873066</x>
+            <y>-0.0667658523</y>
+          </vector>
+        </waypoint>
+        <waypoint time="2.04166675s" before="clamped" after="clamped" tension="10.000000" continuity="5.000000">
+          <vector>
+            <x>0.1801148206</x>
+            <y>1.7183898687</y>
+          </vector>
+        </waypoint>
+        <waypoint time="3s" before="clamped" after="clamped">
+          <vector>
+            <x>2.1758635044</x>
+            <y>-1.1142133474</y>
+          </vector>
+        </waypoint>
+      </animated>
+    </param>
+    <param name="invert">
+      <bool guid="3BC90BB600EE975F2D82F1A531FACF8D" value="true"/>
+    </param>
+    <param name="antialias">
+      <bool value="true"/>
+    </param>
+    <param name="feather">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="blurtype">
+      <integer value="1"/>
+    </param>
+    <param name="winding_style">
+      <integer value="0"/>
+    </param>
+    <param name="radius1">
+      <animated type="real">
+        <waypoint time="0s" before="auto" after="auto">
+          <real value="1.0000000000"/>
+        </waypoint>
+        <waypoint time="1s" before="auto" after="constant">
+          <real value="1.2516682096"/>
+        </waypoint>
+        <waypoint time="2.04166675s" before="clamped" after="clamped">
+          <real value="2.8203991462"/>
+        </waypoint>
+        <waypoint time="3s" before="clamped" after="clamped">
+          <real value="0.0971326589"/>
+        </waypoint>
+      </animated>
+    </param>
+    <param name="radius2">
+      <animated type="real">
+        <waypoint time="0s" before="clamped" after="clamped">
+          <real value="0.3970142889"/>
+        </waypoint>
+        <waypoint time="1s" before="clamped" after="clamped">
+          <real value="0.6792601684"/>
+        </waypoint>
+        <waypoint time="2.04166675s" before="clamped" after="clamped">
+          <real value="1.8159090000"/>
+        </waypoint>
+        <waypoint time="3s" before="clamped" after="clamped">
+          <real value="2.0567821136"/>
+        </waypoint>
+      </animated>
+    </param>
+    <param name="angle">
+      <animated type="angle">
+        <waypoint time="0s" before="clamped" after="clamped">
+          <angle value="88.412735"/>
+        </waypoint>
+        <waypoint time="1s" before="auto" after="clamped">
+          <angle value="3.110000"/>
+        </waypoint>
+        <waypoint time="2.04166675s" before="clamped" after="constant">
+          <angle value="-49.135548"/>
+        </waypoint>
+        <waypoint time="3s" before="halt" after="clamped">
+          <angle value="-178.897675"/>
+        </waypoint>
+      </animated>
+    </param>
+    <param name="points">
+      <integer value="5"/>
+    </param>
+    <param name="regular_polygon">
+      <animated guid="02CA919B04543146DA66F20DE4D1ED38" type="bool">
+        <waypoint time="0s" before="clamped" after="clamped">
+          <bool guid="19CEB1870E551F74DAAF2340B10FCB98" value="false"/>
+        </waypoint>
+        <waypoint time="0.875s" before="clamped" after="clamped">
+          <bool guid="4D6C47123D9623E89ACB2F7660512F79" value="true"/>
+        </waypoint>
+        <waypoint time="1.33333337s" before="clamped" after="clamped">
+          <bool guid="42D9DBBF31E28D9FACF7603E82313D89" value="false"/>
+        </waypoint>
+        <waypoint time="1.95833337s" before="clamped" after="clamped">
+          <bool guid="7498A2289BAEB895B685CD92ED43E66C" value="false"/>
+        </waypoint>
+        <waypoint time="2.95833325s" before="clamped" after="clamped">
+          <bool guid="2A6637F783CAE81191C4D7C7AE8051A2" value="false"/>
+        </waypoint>
+      </animated>
+    </param>
+  </layer>
+</canvas>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<canvas version="1.0" width="480" height="270" xres="2834.645752" yres="2834.645752" view-box="-4.000000 2.250000 4.000000 -2.250000" antialias="1" fps="24.000" begin-time="0f" end-time="5s" bgcolor="0.500000 0.500000 0.500000 1.000000">
+  <name>Synfig Animation 1</name>
+  <meta name="background_first_color" content="0.880000 0.880000 0.880000"/>
+  <meta name="background_rendering" content="1"/>
+  <meta name="background_second_color" content="0.650000 0.650000 0.650000"/>
+  <meta name="background_size" content="15.000000 15.000000"/>
+  <meta name="grid_color" content="0.623529 0.623529 0.623529"/>
+  <meta name="grid_show" content="0"/>
+  <meta name="grid_size" content="0.250000 0.250000"/>
+  <meta name="grid_snap" content="0"/>
+  <meta name="guide_color" content="0.435294 0.435294 1.000000"/>
+  <meta name="guide_show" content="1"/>
+  <meta name="guide_snap" content="0"/>
+  <meta name="jack_offset" content="0.000000"/>
+  <meta name="onion_skin" content="0"/>
+  <meta name="onion_skin_future" content="0"/>
+  <meta name="onion_skin_past" content="1"/>
+  <keyframe time="0f" active="true"/>
+  <layer type="rectangle" active="true" exclude_from_rendering="false" version="0.2">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="blend_method">
+      <integer value="0" static="true"/>
+    </param>
+    <param name="color">
+      <color>
+        <r>0.259091</r>
+        <g>0.103636</g>
+        <b>0.018182</b>
+        <a>1.000000</a>
+      </color>
+    </param>
+    <param name="point1">
+      <animated type="vector">
+        <waypoint time="0s" before="clamped" after="clamped">
+          <vector>
+            <x>-3.5101788044</x>
+            <y>-1.7705841064</y>
+          </vector>
+        </waypoint>
+        <waypoint time="2.125s" before="constant" after="linear">
+          <vector>
+            <x>-3.0343351364</x>
+            <y>-1.9252066612</y>
+          </vector>
+        </waypoint>
+        <waypoint time="3s" before="linear" after="clamped">
+          <vector>
+            <x>-0.5550482869</x>
+            <y>-0.7954166532</y>
+          </vector>
+        </waypoint>
+      </animated>
+    </param>
+    <param name="point2">
+      <animated type="vector">
+        <waypoint time="0s" before="clamped" after="clamped">
+          <vector>
+            <x>2.8189516068</x>
+            <y>1.9275212288</y>
+          </vector>
+        </waypoint>
+        <waypoint time="1s" before="clamped" after="constant">
+          <vector>
+            <x>0.8217750192</x>
+            <y>0.1781699955</y>
+          </vector>
+        </waypoint>
+        <waypoint time="2.125s" before="clamped" after="clamped">
+          <vector>
+            <x>2.3696756363</x>
+            <y>0.4659851193</y>
+          </vector>
+        </waypoint>
+        <waypoint time="3s" before="clamped" after="clamped">
+          <vector>
+            <x>-3.7893371582</x>
+            <y>1.7658563852</y>
+          </vector>
+        </waypoint>
+        <waypoint time="3.75s" before="clamped" after="clamped">
+          <vector>
+            <x>3.5253946781</x>
+            <y>2.1170349121</y>
+          </vector>
+        </waypoint>
+        <waypoint time="4.25s" before="clamped" after="clamped">
+          <vector>
+            <x>-3.8457012177</x>
+            <y>-2.0860891342</y>
+          </vector>
+        </waypoint>
+      </animated>
+    </param>
+    <param name="expand">
+      <real guid="005795FB1321E76BE35EC17009431B54" value="0.0000000000"/>
+    </param>
+    <param name="invert">
+      <bool value="false"/>
+    </param>
+    <param name="feather_x">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="feather_y">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="bevel">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="bevCircle">
+      <bool value="true"/>
+    </param>
+  </layer>
+</canvas>
