@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <canvas version="1.0" width="480" height="270" xres="2834.645752" yres="2834.645752" view-box="-4.000000 2.250000 4.000000 -2.250000" antialias="1" fps="24.000" begin-time="0f" end-time="2s 12f" bgcolor="0.500000 0.500000 0.500000 1.000000">
-  <name>Synfig Animation 1</name>
+  <name>Synfig Animation 15</name>
   <meta name="background_first_color" content="0.880000 0.880000 0.880000"/>
   <meta name="background_rendering" content="1"/>
   <meta name="background_second_color" content="0.650000 0.650000 0.650000"/>
@@ -17,8 +17,9 @@
   <meta name="onion_skin_future" content="0"/>
   <meta name="onion_skin_past" content="1"/>
   <keyframe time="0f" active="true"/>
-  <keyframe time="2s 12f" active="true"/>
-  <layer type="outline" active="true" exclude_from_rendering="false" version="0.2" desc="Rectangle004 Outline">
+  <keyframe time="1s 6f" active="true"/>
+  <keyframe time="2s 12f" active="true"> (Duplicate)</keyframe>
+  <layer type="outline" active="true" exclude_from_rendering="false" version="0.2" desc="NewSpline002 Outline">
     <param name="z_depth">
       <real value="0.0000000000"/>
     </param>
@@ -37,7 +38,7 @@
       </color>
     </param>
     <param name="origin">
-      <vector guid="700A886F98C1C51F385A1BE85F7BE6E4">
+      <vector guid="13D3ACB9D5B54B2A72BEB91E61C68297">
         <x>0.0000000000</x>
         <y>0.0000000000</y>
       </vector>
@@ -58,27 +59,27 @@
       <integer value="0"/>
     </param>
     <param name="bline">
-      <bline type="bline_point" loop="true">
-        <entry on="0f, 2s 12f">
+      <bline type="bline_point" loop="false">
+        <entry on="0f, 1s 6f, 2s 12f">
           <composite type="bline_point">
             <point>
-              <animated type="vector">
-                <waypoint time="0s" before="clamped" after="clamped">
-                  <vector>
-                    <x>-3.4704365730</x>
-                    <y>-0.1007425934</y>
-                  </vector>
-                </waypoint>
-                <waypoint time="2.5s" before="clamped" after="clamped">
-                  <vector>
-                    <x>-0.4977680445</x>
-                    <y>-1.7889831066</y>
-                  </vector>
-                </waypoint>
-              </animated>
+              <vector>
+                <x>-3.4603505135</x>
+                <y>-0.5308089852</y>
+              </vector>
             </point>
             <width>
-              <real value="1.0000000000"/>
+              <animated type="real">
+                <waypoint time="0s" before="clamped" after="clamped">
+                  <real guid="F3DC092B343426CDC0E2D401B5DF6E8F" value="1.0000000000"/>
+                </waypoint>
+                <waypoint time="1.25s" before="clamped" after="clamped">
+                  <real value="38.3758697510"/>
+                </waypoint>
+                <waypoint time="2.5s" before="clamped" after="clamped">
+                  <real guid="F3DC092B343426CDC0E2D401B5DF6E8F" value="1.0000000000"/>
+                </waypoint>
+              </animated>
             </width>
             <origin>
               <real value="0.5000000000"/>
@@ -91,20 +92,26 @@
                 <radius>
                   <animated type="real">
                     <waypoint time="0s" before="clamped" after="clamped">
-                      <real value="0.0000000000"/>
+                      <real guid="0479D2729CA0FDAED42C73D3A92845E2" value="2.6256186237"/>
+                    </waypoint>
+                    <waypoint time="1.25s" before="clamped" after="clamped">
+                      <real guid="9C84B578389BDE2A1A09A7023830FD4E" value="4.2941018895"/>
                     </waypoint>
                     <waypoint time="2.5s" before="clamped" after="clamped">
-                      <real value="0.0000000000"/>
+                      <real guid="BA2E6BABFA16747ED19A57C673CB8247" value="2.6256186237"/>
                     </waypoint>
                   </animated>
                 </radius>
                 <theta>
                   <animated type="angle">
                     <waypoint time="0s" before="clamped" after="clamped">
-                      <angle value="0.000000"/>
+                      <angle guid="EC1EEEF0436C2D6148E1A193110E8E58" value="45.020741"/>
+                    </waypoint>
+                    <waypoint time="1.25s" before="clamped" after="clamped">
+                      <angle guid="64DFC3C76FD783B2CBB4947387DE298F" value="-21.297831"/>
                     </waypoint>
                     <waypoint time="2.5s" before="clamped" after="clamped">
-                      <angle value="-180.000000"/>
+                      <angle guid="3B41A24DB8CA23B994EF99D245A9701D" value="45.020741"/>
                     </waypoint>
                   </animated>
                 </theta>
@@ -115,53 +122,59 @@
                 <radius>
                   <animated type="real">
                     <waypoint time="0s" before="clamped" after="clamped">
-                      <real value="0.0000000000"/>
+                      <real guid="899E587BA7A2084AE4212F8BCD8D9C19" value="2.6256186237"/>
+                    </waypoint>
+                    <waypoint time="1.25s" before="clamped" after="clamped">
+                      <real guid="C06FA76BD6F67FE557369619CC3E28DD" value="4.2941018895"/>
                     </waypoint>
                     <waypoint time="2.5s" before="clamped" after="clamped">
-                      <real value="1.5933539442"/>
+                      <real guid="65A7577CF010F7D7A17093C766155447" value="2.6256186237"/>
                     </waypoint>
                   </animated>
                 </radius>
                 <theta>
                   <animated type="angle">
                     <waypoint time="0s" before="clamped" after="clamped">
-                      <angle value="0.000000"/>
+                      <angle guid="0D4D94D440BF00808690D1C1FC7BC4B9" value="45.020741"/>
+                    </waypoint>
+                    <waypoint time="1.25s" before="clamped" after="clamped">
+                      <angle guid="B4A40C482058195382DC9988FBA2E01A" value="-21.297831"/>
                     </waypoint>
                     <waypoint time="2.5s" before="clamped" after="clamped">
-                      <angle value="94.835129"/>
+                      <angle guid="5C1CFF4CC9C058310EBE04C28E8DC592" value="45.020741"/>
                     </waypoint>
                   </animated>
                 </theta>
               </radial_composite>
             </t2>
             <split_radius>
-              <bool value="true"/>
+              <bool value="false"/>
             </split_radius>
             <split_angle>
               <bool value="false"/>
             </split_angle>
           </composite>
         </entry>
-        <entry on="0f, 2s 12f">
+        <entry on="0f, 1s 6f, 2s 12f">
           <composite type="bline_point">
             <point>
-              <animated type="vector">
-                <waypoint time="0s" before="clamped" after="clamped">
-                  <vector>
-                    <x>-1.2935730219</x>
-                    <y>-0.1007425934</y>
-                  </vector>
-                </waypoint>
-                <waypoint time="2.5s" before="clamped" after="clamped">
-                  <vector>
-                    <x>0.8464242816</x>
-                    <y>-1.7889831066</y>
-                  </vector>
-                </waypoint>
-              </animated>
+              <vector>
+                <x>0.0127420006</x>
+                <y>-0.0641682893</y>
+              </vector>
             </point>
             <width>
-              <real value="1.0000000000"/>
+              <animated type="real">
+                <waypoint time="0s" before="clamped" after="clamped">
+                  <real guid="DD0DA5B25CBC051082B0098B41F79A9B" value="30.1226863861"/>
+                </waypoint>
+                <waypoint time="1.25s" before="clamped" after="clamped">
+                  <real value="10.6616268158"/>
+                </waypoint>
+                <waypoint time="2.5s" before="clamped" after="clamped">
+                  <real guid="DD0DA5B25CBC051082B0098B41F79A9B" value="30.1226863861"/>
+                </waypoint>
+              </animated>
             </width>
             <origin>
               <real value="0.5000000000"/>
@@ -174,20 +187,26 @@
                 <radius>
                   <animated type="real">
                     <waypoint time="0s" before="clamped" after="clamped">
-                      <real value="0.0000000000"/>
+                      <real guid="8359B836F081328E774942C70073E532" value="2.3468997854"/>
+                    </waypoint>
+                    <waypoint time="1.25s" before="clamped" after="clamped">
+                      <real guid="62F1990A8E7D066F79E81C1E0C302B2A" value="2.5773150623"/>
                     </waypoint>
                     <waypoint time="2.5s" before="clamped" after="clamped">
-                      <real value="1.1550280338"/>
+                      <real guid="01F06CD13949BEBA9F892B86D033BF31" value="2.3468997854"/>
                     </waypoint>
                   </animated>
                 </radius>
                 <theta>
                   <animated type="angle">
                     <waypoint time="0s" before="clamped" after="clamped">
-                      <angle value="0.000000"/>
+                      <angle guid="9A7DF4D867F3458D5B5039BD0E5174A1" value="-21.411406"/>
+                    </waypoint>
+                    <waypoint time="1.25s" before="clamped" after="clamped">
+                      <angle guid="CC248EFCD03C06A447138924BED1C358" value="26.998770"/>
                     </waypoint>
                     <waypoint time="2.5s" before="clamped" after="clamped">
-                      <angle value="-85.164871"/>
+                      <angle guid="1C14D81E3C2727F61CCFDB39E07E4358" value="-21.411406"/>
                     </waypoint>
                   </animated>
                 </theta>
@@ -198,53 +217,59 @@
                 <radius>
                   <animated type="real">
                     <waypoint time="0s" before="clamped" after="clamped">
-                      <real value="0.0000000000"/>
+                      <real guid="C729730F6B88FC0C2B1AEE5CD9C82688" value="2.3468997854"/>
+                    </waypoint>
+                    <waypoint time="1.25s" before="clamped" after="clamped">
+                      <real guid="E8D122679D9A46CEE4E5675B7D33AFF1" value="3.3497116937"/>
                     </waypoint>
                     <waypoint time="2.5s" before="clamped" after="clamped">
-                      <real value="0.0000000000"/>
+                      <real guid="64B1ED57D24E3C83289975A6D697A982" value="2.3468997854"/>
                     </waypoint>
                   </animated>
                 </radius>
                 <theta>
                   <animated type="angle">
                     <waypoint time="0s" before="clamped" after="clamped">
-                      <angle value="0.000000"/>
+                      <angle guid="B5E706498BCAE64570F8A313909ED74C" value="-21.411406"/>
+                    </waypoint>
+                    <waypoint time="1.25s" before="clamped" after="clamped">
+                      <angle guid="F577550D1033E903245F0293C389E2E6" value="25.632629"/>
                     </waypoint>
                     <waypoint time="2.5s" before="clamped" after="clamped">
-                      <angle value="0.000000"/>
+                      <angle guid="46A1E64742D3C9722730279B983B178A" value="-21.411406"/>
                     </waypoint>
                   </animated>
                 </theta>
               </radial_composite>
             </t2>
             <split_radius>
-              <bool value="true"/>
+              <bool value="false"/>
             </split_radius>
             <split_angle>
               <bool value="false"/>
             </split_angle>
           </composite>
         </entry>
-        <entry on="0f, 2s 12f">
+        <entry on="0f, 1s 6f, 2s 12f">
           <composite type="bline_point">
             <point>
-              <animated type="vector">
-                <waypoint time="0s" before="clamped" after="clamped">
-                  <vector>
-                    <x>-1.2935730219</x>
-                    <y>1.8908767700</y>
-                  </vector>
-                </waypoint>
-                <waypoint time="2.5s" before="clamped" after="clamped">
-                  <vector>
-                    <x>0.8464242816</x>
-                    <y>-0.5591773391</y>
-                  </vector>
-                </waypoint>
-              </animated>
+              <vector>
+                <x>3.0985321999</x>
+                <y>-0.4898483157</y>
+              </vector>
             </point>
             <width>
-              <real value="1.0000000000"/>
+              <animated type="real">
+                <waypoint time="0s" before="clamped" after="clamped">
+                  <real guid="9A932428A0187E84003450F0C54EAF53" value="1.0000000000"/>
+                </waypoint>
+                <waypoint time="1.25s" before="clamped" after="clamped">
+                  <real value="34.5181884766"/>
+                </waypoint>
+                <waypoint time="2.5s" before="clamped" after="clamped">
+                  <real guid="9A932428A0187E84003450F0C54EAF53" value="1.0000000000"/>
+                </waypoint>
+              </animated>
             </width>
             <origin>
               <real value="0.5000000000"/>
@@ -257,20 +282,26 @@
                 <radius>
                   <animated type="real">
                     <waypoint time="0s" before="clamped" after="clamped">
-                      <real value="0.0000000000"/>
+                      <real guid="00A782B2F5D7AADD34C0D435783CF2D6" value="2.7972295797"/>
+                    </waypoint>
+                    <waypoint time="1.25s" before="clamped" after="clamped">
+                      <real guid="37C202EEDF923A4D0B60DC7490E8D0EC" value="3.4714384074"/>
                     </waypoint>
                     <waypoint time="2.5s" before="clamped" after="clamped">
-                      <real value="0.0000000000"/>
+                      <real guid="8A1453938464893193269603B3CE8F53" value="2.7972295797"/>
                     </waypoint>
                   </animated>
                 </radius>
                 <theta>
                   <animated type="angle">
                     <waypoint time="0s" before="clamped" after="clamped">
-                      <angle value="0.000000"/>
+                      <angle guid="4B75EA37DFB0D3DEC92F912629018F34" value="24.307856"/>
+                    </waypoint>
+                    <waypoint time="1.25s" before="clamped" after="clamped">
+                      <angle guid="EB00B3EA2DE305CC6A642B576FEACC3D" value="-38.617748"/>
                     </waypoint>
                     <waypoint time="2.5s" before="clamped" after="clamped">
-                      <angle value="-180.000000"/>
+                      <angle guid="42D4E235E1979468A0DFC4EBF0139422" value="24.307856"/>
                     </waypoint>
                   </animated>
                 </theta>
@@ -279,112 +310,15 @@
             <t2>
               <radial_composite type="vector">
                 <radius>
-                  <animated type="real">
-                    <waypoint time="0s" before="clamped" after="clamped">
-                      <real value="0.0000000000"/>
-                    </waypoint>
-                    <waypoint time="2.5s" before="clamped" after="clamped">
-                      <real value="1.0817743440"/>
-                    </waypoint>
-                  </animated>
+                  <real value="2.7972295428"/>
                 </radius>
                 <theta>
-                  <animated type="angle">
-                    <waypoint time="0s" before="clamped" after="clamped">
-                      <angle value="0.000000"/>
-                    </waypoint>
-                    <waypoint time="2.5s" before="clamped" after="clamped">
-                      <angle value="268.578461"/>
-                    </waypoint>
-                  </animated>
+                  <angle value="24.307856"/>
                 </theta>
               </radial_composite>
             </t2>
             <split_radius>
-              <bool value="true"/>
-            </split_radius>
-            <split_angle>
               <bool value="false"/>
-            </split_angle>
-          </composite>
-        </entry>
-        <entry on="0f, 2s 12f">
-          <composite type="bline_point">
-            <point>
-              <animated type="vector">
-                <waypoint time="0s" before="clamped" after="clamped">
-                  <vector>
-                    <x>-3.4704365730</x>
-                    <y>1.8908767700</y>
-                  </vector>
-                </waypoint>
-                <waypoint time="2.5s" before="clamped" after="clamped">
-                  <vector>
-                    <x>-0.4977680445</x>
-                    <y>-0.5591773391</y>
-                  </vector>
-                </waypoint>
-              </animated>
-            </point>
-            <width>
-              <real value="1.0000000000"/>
-            </width>
-            <origin>
-              <real value="0.5000000000"/>
-            </origin>
-            <split>
-              <bool value="false"/>
-            </split>
-            <t1>
-              <radial_composite type="vector">
-                <radius>
-                  <animated type="real">
-                    <waypoint time="0s" before="clamped" after="clamped">
-                      <real value="0.0000000000"/>
-                    </waypoint>
-                    <waypoint time="2.5s" before="clamped" after="clamped">
-                      <real value="1.2821000424"/>
-                    </waypoint>
-                  </animated>
-                </radius>
-                <theta>
-                  <animated type="angle">
-                    <waypoint time="0s" before="clamped" after="clamped">
-                      <angle value="0.000000"/>
-                    </waypoint>
-                    <waypoint time="2.5s" before="clamped" after="clamped">
-                      <angle value="88.578438"/>
-                    </waypoint>
-                  </animated>
-                </theta>
-              </radial_composite>
-            </t1>
-            <t2>
-              <radial_composite type="vector">
-                <radius>
-                  <animated type="real">
-                    <waypoint time="0s" before="clamped" after="clamped">
-                      <real value="0.0000000000"/>
-                    </waypoint>
-                    <waypoint time="2.5s" before="clamped" after="clamped">
-                      <real value="0.0000000000"/>
-                    </waypoint>
-                  </animated>
-                </radius>
-                <theta>
-                  <animated type="angle">
-                    <waypoint time="0s" before="clamped" after="clamped">
-                      <angle value="0.000000"/>
-                    </waypoint>
-                    <waypoint time="2.5s" before="clamped" after="clamped">
-                      <angle value="0.000000"/>
-                    </waypoint>
-                  </animated>
-                </theta>
-              </radial_composite>
-            </t2>
-            <split_radius>
-              <bool value="true"/>
             </split_radius>
             <split_angle>
               <bool value="false"/>
