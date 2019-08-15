@@ -62,7 +62,7 @@ get-synfig () {
 
 test-result () {
 	NAME=$1
-	TEST=$(compare -metric RMSE $TRAVIS_BUILD_DIR/rendering/references/$NAME.png $TRAVIS_BUILD_DIR/rendering/results/$NAME.png NULL 2>&1)
+	TEST=$(compare -metric RMSE $TRAVIS_BUILD_DIR/rendering/references/$NAME.png $TRAVIS_BUILD_DIR/rendering/results/$NAME.png /dev/null 2>&1)
 	TEST=${TEST% *}
 	TEST=${TEST%.*}
 	if [ $TEST -lt $THRESHOLD ]; then
@@ -162,22 +162,25 @@ render-only-one-dir () {
 	render-dir "$TRAVIS_BUILD_DIR/$DIR"
 }
 
+
+if [ -z "$MODE" ]; then
+	MODE="results"
+fi
+
 # Get the modified files from the commit 
 
 if [ -z "$TRAVIS_BUILD_DIR" ]; then
    TRAVIS_BUILD_DIR=$(cd `dirname "$0"`; pwd) # gets directory of current script
 fi
 cd "$TRAVIS_BUILD_DIR"
-if [ -z "$TRAVIS_COMMIT_RANGE" ]; then
+if [ -z "$TRAVIS_COMMIT_RANGE" ] || [ "$MODE" = "results" ]; then
    # rebuild everything
    CHANGED_FILES="rendering/sources/sources.txt"
 else
    CHANGED_FILES=`git diff --name-only $TRAVIS_COMMIT_RANGE`
 fi
 
-if [ -z "$MODE" ]; then
-	MODE="results"
-fi
+
 
 for file in $CHANGED_FILES; do
 	EXT=${file##*.}
@@ -185,19 +188,26 @@ for file in $CHANGED_FILES; do
 	NAME=${file##*/}
 	NAME=${NAME%.*}
 	PARENT_DIR_NAME=${DIR##*/}
+	TOP_DIR=${file%%/*}
 
-	# eg: sources/layers/rectangle/rectangle-0.sif
+	# eg: rendering/sources/layers/rectangle/rectangle-0.sif
 	# EXT = "sif"
-	# DIR = "sources/layers/rectangle"
+	# DIR = "rendering/sources/layers/rectangle"
 	# NAME = "rectangle-0"
+	# PARENT_DIR_NAME = "rectangle"
+	# TOP_DIR = "rendering"
+	
+	if [ "$TOP_DIR" = "rendering" ]; then
 
-	if [ "$EXT" = "sif" ]; then
-		render-only-one-file $file
-	elif [ "$EXT" = "txt" ]; then	
-		if [ "$PARENT_DIR_NAME" = "$NAME" ]; then
-			render-only-one-dir $file
-		else	
-			render-only-one-file "$TRAVIS_BUILD_DIR/$file"
-   		fi
+		if [ "$EXT" = "sif" ]; then
+			render-only-one-file $file
+		elif [ "$EXT" = "txt" ]; then	
+			if [ "$PARENT_DIR_NAME" = "$NAME" ]; then
+				render-only-one-dir $file
+			else	
+				render-only-one-file "$TRAVIS_BUILD_DIR/$file"
+			fi
+		fi
+	
 	fi
 done
