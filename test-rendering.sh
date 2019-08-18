@@ -62,17 +62,20 @@ get-synfig () {
 
 test-result () {
 	NAME=$1
-	TEST=$(compare -metric RMSE $TRAVIS_BUILD_DIR/rendering/references/$NAME.png $TRAVIS_BUILD_DIR/rendering/results/$NAME.png /dev/null 2>&1)
+	TEST=$(compare -metric RMSE $TRAVIS_BUILD_DIR/rendering/references/$NAME.png $TRAVIS_BUILD_DIR/rendering/results/$NAME.png /dev/null 2>&1  || true)
 	TEST=${TEST% *}
 	TEST=${TEST%.*}
 	if [ $TEST -lt $THRESHOLD ]; then
 		echo "$NAME passed"
 		PASS=$((PASS+1))
 	else
-		echo "SNAME failed"
+		echo "$NAME failed"
 		FAIL=$((FAIL+1))
 		FAILED_TEST="$FAILED_TEST $NAME \n"
 	fi
+	echo "============================"
+	echo
+	echo
 }
 
 set-version () {
@@ -213,3 +216,18 @@ for file in $CHANGED_FILES; do
 	
 	fi
 done
+
+if [ "$MODE" = "results" ]; then
+echo
+echo
+echo "==================================="
+echo "Failed tests: $FAIL"
+echo "==================================="
+echo "$FAILED_TEST"
+echo "==================================="
+echo
+echo
+if [ $FAIL -gt 0 ]; then
+exit 1
+fi
+fi
