@@ -8,7 +8,7 @@ set -e
 MODE=$1 # references / results
 
 VERSION="1.0.2" 
-SYNFIG=""
+SYNFIG="synfig"
 
 # For test results
 
@@ -137,7 +137,9 @@ synfig-render () {
 render-only-one-file () {
 	FILE=$1
 	set-version $FILE
+	if [ "$MODE" = "references" ]; then
 	get-synfig $VERSION
+	fi
 	synfig-render $FILE
 }
 
