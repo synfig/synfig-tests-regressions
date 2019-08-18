@@ -17,6 +17,8 @@ PASS=0
 FAIL=0
 FAILED_TEST=""
 
+WORKDIR=$(cd `dirname "$0"`; pwd)
+
 get-synfig-tar () {
 	SYNFIG="/tmp/synfig-$VERSION/synfig"
 	if [ ! -d "/tmp/synfig-$VERSION" ]; then
@@ -62,7 +64,7 @@ get-synfig () {
 
 test-result () {
 	NAME=$1
-	TEST=$(compare -metric RMSE $TRAVIS_BUILD_DIR/rendering/references/$NAME.png $TRAVIS_BUILD_DIR/rendering/results/$NAME.png /dev/null 2>&1  || true)
+	TEST=$(compare -metric RMSE ${WORKDIR}/rendering/references/$NAME.png ${WORKDIR}/rendering/results/$NAME.png /dev/null 2>&1  || true)
 	TEST=${TEST% *}
 	TEST=${TEST%.*}
 	if [ $TEST -lt $THRESHOLD ]; then
@@ -81,10 +83,10 @@ test-result () {
 set-version () {
 	FILE=$1
 
-	pushd $TRAVIS_BUILD_DIR
+	pushd ${WORKDIR}
 	# FILE="/home/reSHARMA/synfig-test-regressions/sources/layers/circle/circle-radius-0.txt"
 
-	TEMP=${TRAVIS_BUILD_DIR}
+	TEMP=${WORKDIR}
 	FILE=${FILE##*$TEMP/} # TODO: do this in a better way 
 	IFS='/'
 	read -r -a array <<< "$FILE"
@@ -125,12 +127,12 @@ synfig-render () {
 	DIR=${NAME%/*}	
 	NAME=${NAME%.*}
 	FILE=${FILE%.*}
-	if [[ -f "${TRAVIS_BUILD_DIR}/$FILE.sif" ]]; then
-        if [ ! -d "${TRAVIS_BUILD_DIR}/rendering/$MODE/$DIR" ]; then
-            mkdir -p "${TRAVIS_BUILD_DIR}/rendering/$MODE/$DIR"
+	if [[ -f "${WORKDIR}/$FILE.sif" ]]; then
+        if [ ! -d "${WORKDIR}/rendering/$MODE/$DIR" ]; then
+            mkdir -p "${WORKDIR}/rendering/$MODE/$DIR"
             echo $DIR" created...."
         fi
-		$SYNFIG -v 10 --time 0 -i "${TRAVIS_BUILD_DIR}/$FILE.sif" -o "${TRAVIS_BUILD_DIR}/rendering/$MODE/$NAME.png"
+		$SYNFIG -v 10 --time 0 -i "${WORKDIR}/$FILE.sif" -o "${WORKDIR}/rendering/$MODE/$NAME.png"
 		if [ "$MODE" = "results" ]; then
 			test-result $NAME
 		fi
@@ -164,7 +166,7 @@ render-dir () {
 render-only-one-dir () {
 	FILE=$1
 	DIR=${FILE%/*}
-	render-dir "$TRAVIS_BUILD_DIR/$DIR"
+	render-dir "${WORKDIR}/$DIR"
 }
 
 
@@ -174,10 +176,7 @@ fi
 
 # Get the modified files from the commit 
 
-if [ -z "$TRAVIS_BUILD_DIR" ]; then
-   TRAVIS_BUILD_DIR=$(cd `dirname "$0"`; pwd) # gets directory of current script
-fi
-cd "$TRAVIS_BUILD_DIR"
+cd "${WORKDIR}"
 if [ -z "$TRAVIS_COMMIT_RANGE" ] || [ "$MODE" = "results" ]; then
    # rebuild everything
    CHANGED_FILES="rendering/sources/sources.txt"
@@ -210,7 +209,7 @@ for file in $CHANGED_FILES; do
 			if [ "$PARENT_DIR_NAME" = "$NAME" ]; then
 				render-only-one-dir $file
 			else	
-				render-only-one-file "$TRAVIS_BUILD_DIR/$file"
+				render-only-one-file "${WORKDIR}/$file"
 			fi
 		fi
 	
