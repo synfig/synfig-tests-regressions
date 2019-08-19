@@ -17,34 +17,26 @@
   <meta name="onion_skin_future" content="0"/>
   <meta name="onion_skin_past" content="1"/>
   <keyframe time="0f" active="true"/>
-  <keyframe time="4s" active="true"/>
   <bones>
-    <bone_root type="bone_object" guid="C4CA450087EDEA3FEF85876021ED5B6B"/>
-    <bone type="bone_object" guid="9D57C34E2789817231AF2B9B6887928A">
+    <bone_root type="bone_object" guid="BA8C207A3EF2ECDCCB4C2FA556CD0DD9"/>
+    <bone type="bone_object" guid="BE5D91CD559F2ED243E8E058029A08E7">
       <name>
-        <string>Bone 1</string>
+        <string>Bone 9</string>
       </name>
       <parent>
-        <bone_valuenode type="bone_object" guid="C4CA450087EDEA3FEF85876021ED5B6B"/>
+        <bone_valuenode type="bone_object" guid="BA8C207A3EF2ECDCCB4C2FA556CD0DD9"/>
       </parent>
       <origin>
-        <vector>
-          <x>0.1000000015</x>
-          <y>-0.0500000007</y>
+        <vector guid="67EAF07D1A8C1BEDEDCE3258486AA24C">
+          <x>0.0000000000</x>
+          <y>0.0000000000</y>
         </vector>
       </origin>
       <angle>
-        <angle value="0.000000"/>
+        <angle guid="123FBDAA8895AF3AF717A7AB7AC9DBB7" value="0.000000"/>
       </angle>
       <scalelx>
-        <animated type="real">
-          <waypoint time="0s" before="clamped" after="clamped">
-            <real value="1.0000000000"/>
-          </waypoint>
-          <waypoint time="4s" before="clamped" after="clamped">
-            <real value="2.0000000000"/>
-          </waypoint>
-        </animated>
+        <real guid="7A4F993D2675CEC89B93421711A0E31A" value="1.0000000000"/>
       </scalelx>
       <width>
         <real value="0.1000000000"/>
@@ -76,46 +68,12 @@
     <param name="bones">
       <static_list type="bone_object">
         <entry>
-          <bone type="bone_object" guid="9D57C34E2789817231AF2B9B6887928A"/>
+          <bone type="bone_object" guid="BE5D91CD559F2ED243E8E058029A08E7"/>
         </entry>
       </static_list>
     </param>
   </layer>
-  <layer type="circle" active="true" exclude_from_rendering="false" version="0.2" desc="Circle013">
-    <param name="z_depth">
-      <real value="0.0000000000"/>
-    </param>
-    <param name="amount">
-      <real value="1.0000000000"/>
-    </param>
-    <param name="blend_method">
-      <integer value="0"/>
-    </param>
-    <param name="color">
-      <color>
-        <r>0.929049</r>
-        <g>0.000048</g>
-        <b>0.000000</b>
-        <a>1.000000</a>
-      </color>
-    </param>
-    <param name="radius">
-      <real value="0.4416269449"/>
-    </param>
-    <param name="feather">
-      <real value="0.0000000000"/>
-    </param>
-    <param name="origin">
-      <vector>
-        <x>1.1110030413</x>
-        <y>-0.0544232279</y>
-      </vector>
-    </param>
-    <param name="invert">
-      <bool value="false"/>
-    </param>
-  </layer>
-  <layer type="circle" active="true" exclude_from_rendering="false" version="0.2" desc="Circle013">
+  <layer type="circle" active="true" exclude_from_rendering="false" version="0.2" desc="Circle016">
     <param name="z_depth">
       <real value="0.0000000000"/>
     </param>
@@ -129,27 +87,27 @@
       <color>
         <r>0.929049</r>
         <g>0.000000</g>
-        <b>0.000204</b>
+        <b>0.000046</b>
         <a>1.000000</a>
       </color>
     </param>
     <param name="radius">
-      <real value="0.4342948372"/>
+      <real value="0.1324179394"/>
     </param>
     <param name="feather">
       <real value="0.0000000000"/>
     </param>
     <param name="origin">
       <vector>
-        <x>2.1220061779</x>
-        <y>-0.0544232279</y>
+        <x>0.0000000000</x>
+        <y>0.0000000000</y>
       </vector>
     </param>
     <param name="invert">
       <bool value="false"/>
     </param>
   </layer>
-  <layer type="circle" active="true" exclude_from_rendering="false" version="0.2" desc="Circle013">
+  <layer type="switch" active="true" exclude_from_rendering="false" version="0.0" desc="tux.png">
     <param name="z_depth">
       <real value="0.0000000000"/>
     </param>
@@ -157,35 +115,39 @@
       <real value="1.0000000000"/>
     </param>
     <param name="blend_method">
-      <integer value="0"/>
-    </param>
-    <param name="color">
-      <color>
-        <r>0.259365</r>
-        <g>0.929081</g>
-        <b>0.000000</b>
-        <a>1.000000</a>
-      </color>
-    </param>
-    <param name="radius">
-      <real value="0.4064626058"/>
-    </param>
-    <param name="feather">
-      <real value="0.0000000000"/>
+      <integer value="0" static="true"/>
     </param>
     <param name="origin">
-      <bone_link type="vector">
+      <vector>
+        <x>0.0000000000</x>
+        <y>0.0000000000</y>
+      </vector>
+    </param>
+    <param name="transformation">
+      <bone_link type="transformation">
         <bone>
-          <bone_valuenode type="bone_object" guid="9D57C34E2789817231AF2B9B6887928A"/>
+          <bone_valuenode type="bone_object" guid="BE5D91CD559F2ED243E8E058029A08E7"/>
         </bone>
         <base_value>
-          <composite type="vector">
-            <x>
-              <real value="1.0110030703"/>
-            </x>
-            <y>
-              <real value="-0.0044232267"/>
-            </y>
+          <composite type="transformation">
+            <offset>
+              <vector>
+                <x>0.5074992776</x>
+                <y>0.4299929440</y>
+              </vector>
+            </offset>
+            <angle>
+              <angle value="0.000000"/>
+            </angle>
+            <skew_angle>
+              <angle value="0.000000"/>
+            </skew_angle>
+            <scale>
+              <vector>
+                <x>0.1787423939</x>
+                <y>0.1787423939</y>
+              </vector>
+            </scale>
           </composite>
         </base_value>
         <translate>
@@ -205,42 +167,59 @@
         </scale_y>
       </bone_link>
     </param>
-    <param name="invert">
-      <bool value="false"/>
+    <param name="canvas">
+      <canvas>
+        <layer type="import" active="true" exclude_from_rendering="false" version="0.1" desc="tux.png">
+          <param name="z_depth">
+            <real value="0.0000000000"/>
+          </param>
+          <param name="amount">
+            <real value="1.0000000000"/>
+          </param>
+          <param name="blend_method">
+            <integer value="0" static="true"/>
+          </param>
+          <param name="tl">
+            <vector>
+              <x>-2.0833332539</x>
+              <y>2.4249999523</y>
+            </vector>
+          </param>
+          <param name="br">
+            <vector>
+              <x>2.0833332539</x>
+              <y>-2.4249999523</y>
+            </vector>
+          </param>
+          <param name="c">
+            <integer value="1" static="true"/>
+          </param>
+          <param name="gamma_adjust">
+            <real value="1.0000000000"/>
+          </param>
+          <param name="filename">
+            <string>tux.png</string>
+          </param>
+          <param name="time_offset">
+            <time value="0s"/>
+          </param>
+        </layer>
+      </canvas>
     </param>
-  </layer>
-  <layer type="circle" active="true" exclude_from_rendering="false" version="0.2" desc="Circle014">
-    <param name="z_depth">
-      <real value="0.0000000000"/>
-    </param>
-    <param name="amount">
+    <param name="time_dilation">
       <real value="1.0000000000"/>
     </param>
-    <param name="blend_method">
-      <integer value="0"/>
+    <param name="time_offset">
+      <time value="0s"/>
     </param>
-    <param name="color">
-      <color>
-        <r>0.929049</r>
-        <g>0.000000</g>
-        <b>0.000046</b>
-        <a>1.000000</a>
-      </color>
+    <param name="children_lock">
+      <bool value="true" static="true"/>
     </param>
-    <param name="radius">
-      <real value="0.1097372286"/>
-    </param>
-    <param name="feather">
+    <param name="outline_grow">
       <real value="0.0000000000"/>
     </param>
-    <param name="origin">
-      <vector>
-        <x>0.1000000015</x>
-        <y>-0.0500000007</y>
-      </vector>
-    </param>
-    <param name="invert">
-      <bool value="false"/>
+    <param name="layer_name">
+      <string>tux.png</string>
     </param>
   </layer>
 </canvas>

@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<canvas version="1.0" width="480" height="270" xres="2834.645752" yres="2834.645752" view-box="-4.000000 2.250000 4.000000 -2.250000" antialias="1" fps="24.000" begin-time="0f" end-time="5s" bgcolor="0.500000 0.500000 0.500000 1.000000">
+  <name>Synfig Animation 1</name>
+  <meta name="background_first_color" content="0.880000 0.880000 0.880000"/>
+  <meta name="background_rendering" content="0"/>
+  <meta name="background_second_color" content="0.650000 0.650000 0.650000"/>
+  <meta name="background_size" content="15.000000 15.000000"/>
+  <meta name="grid_color" content="0.623529 0.623529 0.623529"/>
+  <meta name="grid_show" content="0"/>
+  <meta name="grid_size" content="0.250000 0.250000"/>
+  <meta name="grid_snap" content="0"/>
+  <meta name="guide_color" content="0.435294 0.435294 1.000000"/>
+  <meta name="guide_show" content="1"/>
+  <meta name="guide_snap" content="0"/>
+  <meta name="jack_offset" content="0.000000"/>
+  <meta name="onion_skin" content="0"/>
+  <meta name="onion_skin_future" content="0"/>
+  <meta name="onion_skin_past" content="1"/>
+  <keyframe time="0f" active="true"/>
+  <keyframe time="1s" active="true"/>
+  <keyframe time="2s" active="true"/>
+  <keyframe time="3s" active="true"/>
+  <keyframe time="4s" active="true"/>
+  <bones>
+    <bone_root type="bone_object" guid="BA8C207A3EF2ECDCCB4C2FA556CD0DD9"/>
+    <bone type="bone_object" guid="BE5D91CD559F2ED243E8E058029A08E7">
+      <name>
+        <string>Bone 9</string>
+      </name>
+      <parent>
+        <bone_valuenode type="bone_object" guid="BA8C207A3EF2ECDCCB4C2FA556CD0DD9"/>
+      </parent>
+      <origin>
+        <animated type="vector">
+          <waypoint time="1s" before="clamped" after="clamped">
+            <vector guid="67EAF07D1A8C1BEDEDCE3258486AA24C">
+              <x>0.0000000000</x>
+              <y>0.0000000000</y>
+            </vector>
+          </waypoint>
+          <waypoint time="2s" before="clamped" after="clamped">
+            <vector guid="85390C22DA025E062DA3E60BE2FFFE20">
+              <x>0.8805963993</x>
+              <y>0.8884848356</y>
+            </vector>
+          </waypoint>
+          <waypoint time="3s" before="clamped" after="clamped">
+            <vector guid="FA10AED13EC1959975C31A398AE8446E">
+              <x>1.7426593304</x>
+              <y>0.9835031033</y>
+            </vector>
+          </waypoint>
+          <waypoint time="4s" before="clamped" after="clamped">
+            <vector guid="71355BBA3F8F6BE26743F5E68E24EEC0">
+              <x>1.7426593304</x>
+              <y>0.9835031033</y>
+            </vector>
+          </waypoint>
+          <waypoint time="5s" before="clamped" after="clamped">
+            <vector guid="FA10AED13EC1959975C31A398AE8446E">
+              <x>1.7426593304</x>
+              <y>0.9835031033</y>
+            </vector>
+          </waypoint>
+        </animated>
+      </origin>
+      <angle>
+        <animated type="angle">
+          <waypoint time="0s" before="clamped" after="clamped">
+            <angle guid="123FBDAA8895AF3AF717A7AB7AC9DBB7" value="0.000000"/>
+          </waypoint>
+          <waypoint time="1s" before="clamped" after="clamped">
+            <angle guid="4126C70157D491DA759A8F84BFD07FAE" value="59.620331"/>
+          </waypoint>
+          <waypoint time="2s" before="clamped" after="clamped">
+            <angle guid="4F420EBDBDB14240252ADD6BFD1F6075" value="59.620331"/>
+          </waypoint>
+          <waypoint time="3s" before="clamped" after="clamped">
+            <angle guid="6F41AAD6FD61984EC2AA2DB780396540" value="-47.027149"/>
+          </waypoint>
+          <waypoint time="4s" before="clamped" after="clamped">
+            <angle guid="1AEDB2E8407A91F8277E37A25E35F596" value="-110.352592"/>
+          </waypoint>
+          <waypoint time="5s" before="clamped" after="clamped">
+            <angle guid="6F41AAD6FD61984EC2AA2DB780396540" value="-47.027149"/>
+          </waypoint>
+        </animated>
+      </angle>
+      <scalelx>
+        <animated type="real">
+          <waypoint time="3s" before="clamped" after="clamped">
+            <real guid="7A4F993D2675CEC89B93421711A0E31A" value="1.0000000000"/>
+          </waypoint>
+          <waypoint time="4s" before="clamped" after="clamped">
+            <real guid="ABAB6A78781A3DEC47F039710F8FB2C5" value="1.8295709413"/>
+          </waypoint>
+          <waypoint time="5s" before="clamped" after="clamped">
+            <real guid="7A4F993D2675CEC89B93421711A0E31A" value="1.0000000000"/>
+          </waypoint>
+        </animated>
+      </scalelx>
+      <width>
+        <real value="0.1000000000"/>
+      </width>
+      <scalex>
+        <real value="1.0000000000"/>
+      </scalex>
+      <tipwidth>
+        <real value="0.1000000000"/>
+      </tipwidth>
+      <bone_depth>
+        <real value="0.0000000000"/>
+      </bone_depth>
+      <length>
+        <real value="1.0000000000"/>
+      </length>
+    </bone>
+  </bones>
+  <layer type="skeleton" active="true" exclude_from_rendering="false" version="0.1">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <real value="0.5000000000"/>
+    </param>
+    <param name="name">
+      <string>skeleton</string>
+    </param>
+    <param name="bones">
+      <static_list type="bone_object">
+        <entry>
+          <bone type="bone_object" guid="BE5D91CD559F2ED243E8E058029A08E7"/>
+        </entry>
+      </static_list>
+    </param>
+  </layer>
+  <layer type="circle" active="true" exclude_from_rendering="false" version="0.2" desc="Circle016">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="blend_method">
+      <integer value="0"/>
+    </param>
+    <param name="color">
+      <color>
+        <r>0.929049</r>
+        <g>0.000000</g>
+        <b>0.000046</b>
+        <a>1.000000</a>
+      </color>
+    </param>
+    <param name="radius">
+      <real value="0.1324179394"/>
+    </param>
+    <param name="feather">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="origin">
+      <vector>
+        <x>0.0000000000</x>
+        <y>0.0000000000</y>
+      </vector>
+    </param>
+    <param name="invert">
+      <bool value="false"/>
+    </param>
+  </layer>
+  <layer type="switch" active="true" exclude_from_rendering="false" version="0.0" desc="tux.png">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="blend_method">
+      <integer value="0" static="true"/>
+    </param>
+    <param name="origin">
+      <vector>
+        <x>0.0000000000</x>
+        <y>0.0000000000</y>
+      </vector>
+    </param>
+    <param name="transformation">
+      <bone_link type="transformation">
+        <bone>
+          <bone_valuenode type="bone_object" guid="BE5D91CD559F2ED243E8E058029A08E7"/>
+        </bone>
+        <base_value>
+          <composite type="transformation">
+            <offset>
+              <vector>
+                <x>0.5074992776</x>
+                <y>0.4299929440</y>
+              </vector>
+            </offset>
+            <angle>
+              <angle value="0.000000"/>
+            </angle>
+            <skew_angle>
+              <angle value="0.000000"/>
+            </skew_angle>
+            <scale>
+              <vector>
+                <x>0.1787423939</x>
+                <y>0.1787423939</y>
+              </vector>
+            </scale>
+          </composite>
+        </base_value>
+        <translate>
+          <bool value="true"/>
+        </translate>
+        <rotate>
+          <bool value="true"/>
+        </rotate>
+        <skew>
+          <bool value="true"/>
+        </skew>
+        <scale_x>
+          <bool value="true"/>
+        </scale_x>
+        <scale_y>
+          <bool value="true"/>
+        </scale_y>
+      </bone_link>
+    </param>
+    <param name="canvas">
+      <canvas>
+        <layer type="import" active="true" exclude_from_rendering="false" version="0.1" desc="tux.png">
+          <param name="z_depth">
+            <real value="0.0000000000"/>
+          </param>
+          <param name="amount">
+            <real value="1.0000000000"/>
+          </param>
+          <param name="blend_method">
+            <integer value="0" static="true"/>
+          </param>
+          <param name="tl">
+            <vector>
+              <x>-2.0833332539</x>
+              <y>2.4249999523</y>
+            </vector>
+          </param>
+          <param name="br">
+            <vector>
+              <x>2.0833332539</x>
+              <y>-2.4249999523</y>
+            </vector>
+          </param>
+          <param name="c">
+            <integer value="1" static="true"/>
+          </param>
+          <param name="gamma_adjust">
+            <real value="1.0000000000"/>
+          </param>
+          <param name="filename">
+            <string>tux.png</string>
+          </param>
+          <param name="time_offset">
+            <time value="0s"/>
+          </param>
+        </layer>
+      </canvas>
+    </param>
+    <param name="time_dilation">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="time_offset">
+      <time value="0s"/>
+    </param>
+    <param name="children_lock">
+      <bool value="true" static="true"/>
+    </param>
+    <param name="outline_grow">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="layer_name">
+      <string>tux.png</string>
+    </param>
+  </layer>
+</canvas>
