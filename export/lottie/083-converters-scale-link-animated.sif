@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<canvas version="1.0" width="480" height="270" xres="2834.645752" yres="2834.645752" view-box="-4.000000 2.250000 4.000000 -2.250000" antialias="1" fps="24.000" begin-time="0f" end-time="5s" bgcolor="0.500000 0.500000 0.500000 1.000000">
+  <name>Synfig Animation 3</name>
+  <meta name="background_first_color" content="0.880000 0.880000 0.880000"/>
+  <meta name="background_rendering" content="0"/>
+  <meta name="background_second_color" content="0.650000 0.650000 0.650000"/>
+  <meta name="background_size" content="15.000000 15.000000"/>
+  <meta name="grid_color" content="0.623529 0.623529 0.623529"/>
+  <meta name="grid_show" content="0"/>
+  <meta name="grid_size" content="0.250000 0.250000"/>
+  <meta name="grid_snap" content="0"/>
+  <meta name="guide_color" content="0.435294 0.435294 1.000000"/>
+  <meta name="guide_show" content="1"/>
+  <meta name="guide_snap" content="0"/>
+  <meta name="jack_offset" content="0.000000"/>
+  <meta name="onion_skin" content="0"/>
+  <meta name="onion_skin_future" content="0"/>
+  <meta name="onion_skin_past" content="1"/>
+  <keyframe time="0f" active="true"/>
+  <defs>
+    <animated guid="0B1DC4320EC1C0B65F5D36C326F3931C" type="real" id="radius">
+      <waypoint time="0s" before="clamped" after="clamped">
+        <real guid="DD99CD189E4C2C7455849998EE729F1A" value="0.5006856283"/>
+      </waypoint>
+      <waypoint time="0.75s" before="clamped" after="clamped">
+        <real guid="CB7BBCF607A67ACA8EEEE192D090136E" value="0.3759362641"/>
+      </waypoint>
+      <waypoint time="1.45833337s" before="clamped" after="clamped">
+        <real guid="DB65C96BF5DE3EEB2B520D8F241434C8" value="0.7432393350"/>
+      </waypoint>
+      <waypoint time="2.08333325s" before="clamped" after="clamped">
+        <real guid="82951A055AA15FD2289C851B1834B45A" value="0.4689538487"/>
+      </waypoint>
+      <waypoint time="3s" before="clamped" after="clamped">
+        <real guid="EA696A9BC09883D8A70FEB7E7B57881B" value="1.6489023855"/>
+      </waypoint>
+      <waypoint time="3.58333325s" before="clamped" after="clamped">
+        <real guid="88AC57C91ED70B07D99CAACB08650469" value="0.7217317246"/>
+      </waypoint>
+      <waypoint time="3.875s" before="clamped" after="clamped">
+        <real guid="E858A56BFB3FC1D6689D58C2CD1A2D89" value="0.3090244062"/>
+      </waypoint>
+      <waypoint time="4.20833349s" before="clamped" after="clamped">
+        <real guid="8E30A5252BBDF14DF92E9F10A5A0A50C" value="0.9939188637"/>
+      </waypoint>
+      <waypoint time="4.58333349s" before="clamped" after="clamped">
+        <real guid="14C52CDA2A99DB42AEA8D4FCA4D88B65" value="0.2473958336"/>
+      </waypoint>
+      <waypoint time="5s" before="clamped" after="clamped">
+        <real guid="DD99CD189E4C2C7455849998EE729F1A" value="0.5006856283"/>
+      </waypoint>
+    </animated>
+  </defs>
+  <layer type="circle" active="true" exclude_from_rendering="false" version="0.2" desc="Circle018">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="blend_method">
+      <integer value="0"/>
+    </param>
+    <param name="color">
+      <color>
+        <r>0.929049</r>
+        <g>0.816894</g>
+        <b>0.000000</b>
+        <a>1.000000</a>
+      </color>
+    </param>
+    <param name="radius" use="radius"/>
+    <param name="feather">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="origin">
+      <vector>
+        <x>-1.5367492437</x>
+        <y>0.0401453637</y>
+      </vector>
+    </param>
+    <param name="invert">
+      <bool value="false"/>
+    </param>
+  </layer>
+  <layer type="circle" active="true" exclude_from_rendering="false" version="0.2" desc="Circle019">
+    <param name="z_depth">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="amount">
+      <real value="1.0000000000"/>
+    </param>
+    <param name="blend_method">
+      <integer value="0"/>
+    </param>
+    <param name="color">
+      <color>
+        <r>0.929049</r>
+        <g>0.816894</g>
+        <b>0.000000</b>
+        <a>1.000000</a>
+      </color>
+    </param>
+    <param name="radius">
+      <scale type="real" link="radius">
+        <scalar>
+          <real value="2.0000000000"/>
+        </scalar>
+      </scale>
+    </param>
+    <param name="feather">
+      <real value="0.0000000000"/>
+    </param>
+    <param name="origin">
+      <vector>
+        <x>1.8547546864</x>
+        <y>-0.0158905033</y>
+      </vector>
+    </param>
+    <param name="invert">
+      <bool value="false"/>
+    </param>
+  </layer>
+</canvas>
