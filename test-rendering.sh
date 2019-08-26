@@ -132,7 +132,7 @@ synfig-render () {
             mkdir -p "${WORKDIR}/rendering/$MODE/$DIR"
             echo $DIR" created...."
         fi
-		$SYNFIG -v 10 --time 0 -i "${WORKDIR}/$FILE.sif" -o "${WORKDIR}/rendering/$MODE/$NAME.png"
+		$SYNFIG -v 0 --time 0 -i "${WORKDIR}/$FILE.sif" -o "${WORKDIR}/rendering/$MODE/$NAME.png" >/dev/null
 		if [ "$MODE" = "results" ]; then
 			test-result $NAME
 		fi
