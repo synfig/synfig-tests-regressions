@@ -67,6 +67,7 @@ test-result () {
 	TEST=$(compare -metric RMSE ${WORKDIR}/rendering/references/$NAME.png ${WORKDIR}/rendering/results/$NAME.png /dev/null 2>&1  || true)
 	TEST=${TEST% *}
 	TEST=${TEST%.*}
+	echo "===$TEST==="
 	if [ $TEST -lt $THRESHOLD ]; then
 		echo "$NAME passed"
 		PASS=$((PASS+1))
